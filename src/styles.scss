@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  background-color: $color-main;
+  color: $color-third;
+  -webkit-font-smoothing: antialiased;
+}
