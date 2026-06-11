@@ -9,7 +9,11 @@ export const routes: Routes = [
     path: 'legal-notice',
     loadComponent: () => import('./pages/legal-notice/legal-notice').then(m => m.LegalNoticeComponent)
   },
-{
+  {
+    path: 'privacy-policy',
+    loadComponent: () => import('./pages/privacy-policy/privacy-policy').then(m => m.PrivacyPolicyComponent)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

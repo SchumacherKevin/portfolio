@@ -18,7 +18,7 @@
 .policy__title {
   font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
-  color: $color-third;
+  color: $color-second;
   margin: 0 0 $spacing-12;
   letter-spacing: 0.04em;
 
@@ -41,16 +41,16 @@
 }
 
 .policy__heading {
-  font-size: $font-size-xl;
+  font-size: $font-size-lg;
   font-weight: $font-weight-bold;
-  color: $color-second;
+  color: $color-third;
   margin: 0 0 $spacing-4;
   letter-spacing: 0.06em;
 }
 
 .policy__text {
-  font-size: $font-size-md;
-  color: rgba($color-third, 0.85);
+  font-size: $font-size-sm;
+  color: rgba($color-second, 0.85);
   line-height: $line-height-base;
   margin: 0 0 $spacing-3;
 
@@ -60,7 +60,7 @@
 }
 
 .policy__list {
-  font-size: $font-size-md;
+  font-size: $font-size-sm;
   color: rgba($color-second, 0.85);
   line-height: $line-height-base;
   margin: $spacing-3 0;
