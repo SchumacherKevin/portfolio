@@ -2,14 +2,12 @@
 $color-main:              #13074E;
 $color-second:            #E15544;
 $color-third:             #02F4BF;
-$color-background-alt:    #120B35;
 
 // ─── CSS Custom Properties ────────────────────────────────────────────────────
 :root {
   --color-main:           #{$color-main};
   --color-second:         #{$color-second};
   --color-third:          #{$color-third};
-  --color-background-alt: #{$color-background-alt};
 }
 
 // ─── Typography ───────────────────────────────────────────────────────────────

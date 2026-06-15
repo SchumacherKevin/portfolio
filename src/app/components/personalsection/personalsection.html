@@ -1,1 +1,87 @@
-<p>personalsection works!</p>
+<section class="personal" id="about">
+  <div class="personal__image-wrapper">
+    <img class="personal__image" src="assets/about me 01.JPG" alt="Kevin Schumacher" />
+  </div>
+
+  <div class="personal__content">
+    <h2 class="personal__title">Why me</h2>
+
+    <p class="personal__description">
+      Write some information about yourself that is IT related. Why are you passionate about coding?
+      Highlight your motivation for professional growth and continuous learning. Emphasise your
+      strong problem-solving skills and passion for coding.
+    </p>
+
+    <div class="personal__iam-container">
+
+      <!-- Row 1: "I am" → arrow → location -->
+      <div class="personal__iam-row personal__iam-row--start">
+        <span class="personal__iam-label">I am</span>
+        <img
+          src="assets/arrow-curved-red-02.svg"
+          class="personal__arrow personal__arrow--1"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="personal__node personal__node--location">
+          <div class="personal__node-icon-wrap">
+            <img src="assets/vector.svg" class="personal__node-icon" alt="" />
+            <img src="assets/ellipse.svg" class="personal__node-ellipse" alt="" aria-hidden="true" />
+          </div>
+          <span class="personal__node-text">located<br />in Kaiserslautern</span>
+        </div>
+      </div>
+
+      <!-- Row 2: arrow → relocate (right-aligned) -->
+      <div class="personal__iam-row personal__iam-row--end">
+        <img
+          src="assets/arrow-curved-red-01.svg"
+          class="personal__arrow personal__arrow--2"
+          alt=""
+          aria-hidden="true"
+        />
+        <div
+          class="personal__node personal__node--relocate"
+          (mouseenter)="relocateHover = true"
+          (mouseleave)="relocateHover = false"
+        >
+          <div class="personal__node-icon-wrap">
+            <img
+              [src]="relocateHover ? 'assets/relocate-icon 02.svg' : 'assets/relocate-icon 01.svg'"
+              class="personal__node-icon"
+              alt="Open to relocate"
+            />
+          </div>
+          <span class="personal__node-text">open to<br />relocate</span>
+        </div>
+      </div>
+
+      <!-- Row 3: remote → arrow (left-aligned) -->
+      <div class="personal__iam-row personal__iam-row--start">
+        <div
+          class="personal__node personal__node--remote"
+          (mouseenter)="remoteHover = true"
+          (mouseleave)="remoteHover = false"
+        >
+          <div class="personal__node-icon-wrap">
+            <img
+              [src]="remoteHover ? 'assets/remote-icon 02.svg' : 'assets/remote-icon 01.svg'"
+              class="personal__node-icon"
+              alt="Open to work remote"
+            />
+          </div>
+          <span class="personal__node-text">open to<br />work remote</span>
+        </div>
+        <img
+          src="assets/arrow-curved-red-03.svg"
+          class="personal__arrow personal__arrow--3"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+
+    </div>
+
+    <a href="#contact" class="personal__cta">Let's talk</a>
+  </div>
+</section>

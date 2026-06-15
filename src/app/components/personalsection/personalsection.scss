@@ -1,0 +1,208 @@
+@use '../../../styles/variables' as *;
+
+// ── Section Layout ─────────────────────────────────────────────────────────────
+.personal {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $color-main;
+}
+
+// ── Photo ──────────────────────────────────────────────────────────────────────
+.personal__image-wrapper {
+  overflow: hidden;
+}
+
+.personal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+// ── Right Content ──────────────────────────────────────────────────────────────
+.personal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: $spacing-16 $spacing-12 $spacing-16 $spacing-8;
+  gap: $spacing-8;
+}
+
+// ── Title ──────────────────────────────────────────────────────────────────────
+.personal__title {
+  font-family: $font-family-base;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $color-second;
+}
+
+// ── Description ────────────────────────────────────────────────────────────────
+.personal__description {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: white;
+  line-height: $line-height-base;
+  text-align: right;
+  max-width: 460px;
+}
+
+// ── "I am" container ───────────────────────────────────────────────────────────
+.personal__iam-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: $spacing-4;
+}
+
+// ── Row ────────────────────────────────────────────────────────────────────────
+.personal__iam-row {
+  display: flex;
+  align-items: center;
+  gap: $spacing-6;
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--end {
+    justify-content: flex-end;
+  }
+}
+
+// ── "I am" label ───────────────────────────────────────────────────────────────
+.personal__iam-label {
+  font-family: $font-family-base;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  font-style: italic;
+  color: $color-second;
+  flex-shrink: 0;
+}
+
+// ── Nodes ──────────────────────────────────────────────────────────────────────
+.personal__node {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  cursor: default;
+}
+
+// ── Icon wrapper ───────────────────────────────────────────────────────────────
+.personal__node-icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.personal__node-icon {
+  display: block;
+  height: 44px;
+  width: auto;
+  transition: transform $transition-base;
+
+  .personal__node:hover & {
+    transform: translateY(-5px);
+  }
+}
+
+// ── Ellipse shadow ─────────────────────────────────────────────────────────────
+.personal__node-ellipse {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $transition-base;
+
+  .personal__node:hover & {
+    opacity: 1;
+  }
+}
+
+// ── Node text ──────────────────────────────────────────────────────────────────
+.personal__node-text {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: white;
+  line-height: $line-height-base;
+}
+
+// ── Arrows ─────────────────────────────────────────────────────────────────────
+.personal__arrow {
+  width: 68px;
+  height: auto;
+  pointer-events: none;
+  flex-shrink: 0;
+
+  &--2 {
+    transform: scaleX(-1);
+  }
+}
+
+// ── CTA Button ─────────────────────────────────────────────────────────────────
+.personal__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-3 $spacing-8;
+  background-color: $color-third;
+  color: $color-main;
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: 2px solid $color-third;
+  transition: background-color $transition-base, color $transition-base;
+
+  &:hover {
+    background-color: transparent;
+    color: $color-third;
+  }
+}
+
+// ── Responsive ─────────────────────────────────────────────────────────────────
+@media (max-width: $bp-lg) {
+  .personal {
+    grid-template-columns: 38% 1fr;
+  }
+
+  .personal__content {
+    padding: $spacing-12 $spacing-8 $spacing-12 $spacing-6;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .personal {
+    grid-template-columns: 1fr;
+  }
+
+  .personal__image-wrapper {
+    height: 320px;
+  }
+
+  .personal__content {
+    padding: $spacing-8;
+    align-items: flex-start;
+  }
+
+  .personal__description {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .personal__iam-row--end {
+    justify-content: flex-start;
+  }
+}
