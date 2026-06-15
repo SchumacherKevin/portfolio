@@ -164,11 +164,12 @@
   letter-spacing: 0.05em;
   text-decoration: none;
   border: 2px solid $color-third;
-  transition: background-color $transition-base, color $transition-base;
+  transition:
+    background-color $transition-base,
+    color $transition-base;
 
   &:hover {
-    background-color: transparent;
-    color: $color-third;
+    color: $color-second;
   }
 }
 
