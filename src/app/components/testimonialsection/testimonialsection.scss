@@ -1,0 +1,107 @@
+@use '../../../styles/variables' as *;
+
+// ── Section Layout ─────────────────────────────────────────────────────────────
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: $spacing-16 $spacing-12;
+  background-color: $color-main;
+}
+
+// ── Heading ────────────────────────────────────────────────────────────────────
+.testimonials__title {
+  font-family: $font-family-base;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-second;
+  line-height: $line-height-base;
+}
+
+// ── Body row: arrow + cards ────────────────────────────────────────────────────
+.testimonials__body {
+  display: flex;
+  align-items: center;
+  gap: $spacing-8;
+}
+
+// ── Arrow ──────────────────────────────────────────────────────────────────────
+.testimonials__arrow {
+  flex-shrink: 0;
+  width: 90px;
+  height: auto;
+  align-self: flex-start;
+  margin-top: $spacing-4;
+}
+
+// ── Cards grid ─────────────────────────────────────────────────────────────────
+.testimonials__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-8;
+  flex: 1;
+  align-items: start;
+}
+
+// ── Individual card ────────────────────────────────────────────────────────────
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2;
+}
+
+.testimonials__name {
+  font-family: $font-family-base;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-second;
+}
+
+.testimonials__project {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  color: $color-third;
+  margin-bottom: $spacing-2;
+}
+
+.testimonials__quote {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  font-weight: $font-weight-regular;
+  color: $color-third;
+  line-height: $line-height-base;
+}
+
+// ── Responsive ─────────────────────────────────────────────────────────────────
+@media (max-width: $bp-lg) {
+  .testimonials {
+    padding: $spacing-12 $spacing-8;
+  }
+
+  .testimonials__title {
+    font-size: $font-size-lg;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .testimonials {
+    padding: $spacing-8;
+  }
+
+  .testimonials__arrow {
+    display: none;
+  }
+
+  .testimonials__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .testimonials__cards {
+    grid-template-columns: 1fr;
+    gap: $spacing-6;
+  }
+}
