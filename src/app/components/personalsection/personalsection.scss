@@ -54,24 +54,35 @@
 // ── "I am" container ───────────────────────────────────────────────────────────
 .personal__iam-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  padding: $spacing-6 $spacing-8;
+  row-gap: $spacing-4;
+}
+
+// ── Div 1: I am + location ─────────────────────────────────────────────────────
+.personal__iam-location {
+  display: flex;
+  align-items: center;
   gap: $spacing-4;
 }
 
-// ── Row ────────────────────────────────────────────────────────────────────────
-.personal__iam-row {
+// ── Div 2: arrow-01 + relocate ─────────────────────────────────────────────────
+.personal__relocate-group {
   display: flex;
   align-items: center;
-  gap: $spacing-6;
+  gap: $spacing-4;
+}
 
-  &--start {
-    justify-content: flex-start;
-  }
-
-  &--end {
-    justify-content: flex-end;
-  }
+// ── Div 3: remote + arrow-02 + arrow-03 ───────────────────────────────────────
+.personal__remote-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: $spacing-4;
 }
 
 // ── "I am" label ───────────────────────────────────────────────────────────────
@@ -203,7 +214,12 @@
     max-width: 100%;
   }
 
-  .personal__iam-row--end {
-    justify-content: flex-start;
+  .personal__iam-container {
+    padding: $spacing-4 $spacing-6;
+    row-gap: $spacing-3;
+  }
+
+  .personal__relocate-group {
+    width: 100%;
   }
 }

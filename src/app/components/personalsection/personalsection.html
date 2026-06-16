@@ -13,15 +13,9 @@
     </p>
 
     <div class="personal__iam-container">
-      <!-- Row 1: "I am" → arrow → location -->
-      <div class="personal__iam-row personal__iam-row--start">
+      <!-- Div 1: I am + location -->
+      <div class="personal__iam-location">
         <span class="personal__iam-label">I am</span>
-        <img
-          src="assets/arrow-curved-red-02.svg"
-          class="personal__arrow personal__arrow--1"
-          alt=""
-          aria-hidden="true"
-        />
         <div class="personal__node personal__node--location">
           <div class="personal__node-icon-wrap">
             <img src="assets/vector.svg" class="personal__node-icon" alt="" />
@@ -36,11 +30,11 @@
         </div>
       </div>
 
-      <!-- Row 2: arrow → relocate (right-aligned) -->
-      <div class="personal__iam-row personal__iam-row--end">
+      <!-- Div 2: arrow-01 + relocate -->
+      <div class="personal__relocate-group">
         <img
           src="assets/arrow-curved-red-01.svg"
-          class="personal__arrow personal__arrow--2"
+          class="personal__arrow personal__arrow--1"
           alt=""
           aria-hidden="true"
         />
@@ -60,8 +54,8 @@
         </div>
       </div>
 
-      <!-- Row 3: remote → arrow (left-aligned) -->
-      <div class="personal__iam-row personal__iam-row--start">
+      <!-- Div 3: remote + arrow-02 + arrow-03 -->
+      <div class="personal__remote-group">
         <div
           class="personal__node personal__node--remote"
           (mouseenter)="remoteHover = true"
@@ -76,6 +70,12 @@
           </div>
           <span class="personal__node-text">open to<br />work remote</span>
         </div>
+        <img
+          src="assets/arrow-curved-red-02.svg"
+          class="personal__arrow personal__arrow--2"
+          alt=""
+          aria-hidden="true"
+        />
         <img
           src="assets/arrow-curved-red-03.svg"
           class="personal__arrow personal__arrow--3"
