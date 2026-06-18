@@ -7,9 +7,9 @@
     <h2 class="personal__title">Why me</h2>
 
     <p class="personal__description">
-      Write some information about yourself that is IT related. Why are you passionate about coding?
-      Highlight your motivation for professional growth and continuous learning. Emphasise your
-      strong problem-solving skills and passion for coding.
+      My path into IT wasn't traditional, but my drive to solve problems and keep learning was
+      always there. Today, as a full-stack developer, that mindset shows up in every project:
+      understand the problem, build a solid solution, and never stop improving.
     </p>
 
     <div class="personal__iam-container">
@@ -56,26 +56,28 @@
 
       <!-- Div 3: remote + arrow-02 + arrow-03 -->
       <div class="personal__remote-group">
-        <div
-          class="personal__node personal__node--remote"
-          (mouseenter)="remoteHover = true"
-          (mouseleave)="remoteHover = false"
-        >
-          <div class="personal__node-icon-wrap">
-            <img
-              [src]="remoteHover ? 'assets/remote-icon 02.svg' : 'assets/remote-icon 01.svg'"
-              class="personal__node-icon"
-              alt="Open to work remote"
-            />
+        <div class="personal__remote-node-wrap">
+          <div
+            class="personal__node personal__node--remote"
+            (mouseenter)="remoteHover = true"
+            (mouseleave)="remoteHover = false"
+          >
+            <div class="personal__node-icon-wrap">
+              <img
+                [src]="remoteHover ? 'assets/remote-icon 02.svg' : 'assets/remote-icon 01.svg'"
+                class="personal__node-icon"
+                alt="Open to work remote"
+              />
+            </div>
+            <span class="personal__node-text">open to<br />work remote</span>
           </div>
-          <span class="personal__node-text">open to<br />work remote</span>
+          <img
+            src="assets/arrowwhyme.svg"
+            class="personal__arrow personal__arrow--2"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
-        <img
-          src="assets/arrow-curved-red-02.svg"
-          class="personal__arrow personal__arrow--2"
-          alt=""
-          aria-hidden="true"
-        />
         <img
           src="assets/arrow-curved-red-03.svg"
           class="personal__arrow personal__arrow--3"

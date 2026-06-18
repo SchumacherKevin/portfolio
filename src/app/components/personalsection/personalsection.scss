@@ -43,9 +43,9 @@
 // ── Description ────────────────────────────────────────────────────────────────
 .personal__description {
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   font-weight: $font-weight-regular;
-  color: white;
+  color: $color-third;
   line-height: $line-height-base;
   text-align: right;
   max-width: 460px;
@@ -56,10 +56,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
-  padding: $spacing-6 $spacing-8;
-  row-gap: $spacing-4;
 }
 
 // ── Div 1: I am + location ─────────────────────────────────────────────────────
@@ -67,32 +65,41 @@
   display: flex;
   align-items: center;
   gap: $spacing-4;
+  width: 100%;
 }
 
 // ── Div 2: arrow-01 + relocate ─────────────────────────────────────────────────
 .personal__relocate-group {
   display: flex;
   align-items: center;
-  gap: $spacing-4;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 // ── Div 3: remote + arrow-02 + arrow-03 ───────────────────────────────────────
 .personal__remote-group {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  gap: $spacing-4;
+  gap: $spacing-8;
+}
+
+.personal__remote-node-wrap {
+  display: flex;
+  align-items: center;
+  padding-right: 140px;
 }
 
 // ── "I am" label ───────────────────────────────────────────────────────────────
 .personal__iam-label {
   font-family: $font-family-base;
-  font-size: $font-size-2xl;
+  font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
   font-style: italic;
   color: $color-second;
   flex-shrink: 0;
+  padding-right: 120px;
 }
 
 // ── Nodes ──────────────────────────────────────────────────────────────────────
@@ -143,22 +150,18 @@
 // ── Node text ──────────────────────────────────────────────────────────────────
 .personal__node-text {
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   font-weight: $font-weight-regular;
-  color: white;
+  color: $color-third;
   line-height: $line-height-base;
+  padding-right: 32px;
 }
 
 // ── Arrows ─────────────────────────────────────────────────────────────────────
 .personal__arrow {
-  width: 68px;
   height: auto;
   pointer-events: none;
   flex-shrink: 0;
-
-  &--2 {
-    transform: scaleX(-1);
-  }
 }
 
 // ── CTA Button ─────────────────────────────────────────────────────────────────
