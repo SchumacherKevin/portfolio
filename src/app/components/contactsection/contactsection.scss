@@ -1,0 +1,247 @@
+@use '../../../styles/variables' as *;
+
+// ── Section Layout ─────────────────────────────────────────────────────────────
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: $spacing-16 $spacing-12;
+  background-color: $color-main;
+}
+
+// ── Heading ────────────────────────────────────────────────────────────────────
+.contact__title {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-family: $font-family-base;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $color-second;
+}
+
+.contact__title-arrow {
+  width: 56px;
+  height: auto;
+  margin-top: $spacing-4;
+}
+
+// ── Top row: description + info ─────────────────────────────────────────────────
+.contact__top {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-8;
+}
+
+.contact__description {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: $color-third;
+  line-height: $line-height-base;
+  max-width: 420px;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3;
+}
+
+.contact__info-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-third;
+}
+
+.contact__info-icon-wrap {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.contact__info-icon {
+  width: 22px;
+  height: auto;
+  transition: transform $transition-base;
+
+  .contact__info-icon-wrap:hover & {
+    transform: translateY(-2px);
+  }
+}
+
+.contact__scroll-up {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 18px;
+    height: auto;
+  }
+}
+
+// ── Form ──────────────────────────────────────────────────────────────────────
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+.contact__fields {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  gap: $spacing-6;
+}
+
+.contact__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+}
+
+.contact__input,
+.contact__textarea {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $color-third;
+  background: transparent;
+  border: 1px solid $color-third;
+  border-radius: $radius-sm;
+  padding: $spacing-3 $spacing-4;
+
+  &::placeholder {
+    color: rgba($color-third, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-second;
+  }
+}
+
+.contact__input {
+  height: 48px;
+}
+
+.contact__textarea {
+  height: 100%;
+  min-height: 116px;
+  resize: none;
+  font-family: $font-family-base;
+}
+
+// ── Footer row: checkbox + submit ─────────────────────────────────────────────
+.contact__footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-6;
+}
+
+.contact__checkbox {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $color-third;
+  white-space: nowrap;
+
+  input[type='checkbox'] {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    accent-color: $color-second;
+    border: 1px solid $color-second;
+  }
+}
+
+.contact__privacy-link {
+  color: $color-second;
+  text-decoration: underline;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-third;
+  }
+}
+
+.contact__submit {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  padding: $spacing-3 $spacing-8;
+  background: transparent;
+  border: 1px solid $color-third;
+  border-radius: $radius-sm;
+  color: $color-second;
+  cursor: pointer;
+  transition: $transition-base;
+  flex-shrink: 0;
+
+  &:hover {
+    color: $color-third;
+  }
+}
+
+// ── Responsive ─────────────────────────────────────────────────────────────────
+@media (max-width: $bp-lg) {
+  .contact {
+    padding: $spacing-12 $spacing-8;
+  }
+
+  .contact__title {
+    font-size: $font-size-xl;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .contact {
+    padding: $spacing-8;
+  }
+
+  .contact__top {
+    grid-template-columns: 1fr;
+    gap: $spacing-4;
+  }
+
+  .contact__scroll-up {
+    position: static;
+    align-self: flex-end;
+  }
+
+  .contact__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__textarea {
+    min-height: 140px;
+  }
+
+  .contact__footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-4;
+  }
+
+  .contact__checkbox {
+    white-space: normal;
+  }
+
+  .contact__submit {
+    align-self: flex-end;
+  }
+}

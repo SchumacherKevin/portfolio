@@ -1,0 +1,77 @@
+<section class="contact" id="contact">
+  <h2 class="contact__title">
+    Contact me
+    <img
+      src="assets/arrow-curved-red big-02.svg"
+      class="contact__title-arrow"
+      alt="red arrow"
+      aria-hidden="true"
+    />
+  </h2>
+
+  <div class="contact__top">
+    <p class="contact__description">
+      Encourage people to contact you and describe what role you are interested in. Express interest
+      in contributing to a new project.
+    </p>
+
+    <div class="contact__info">
+      <p class="contact__info-item">
+        <span
+          class="contact__info-icon-wrap"
+          (mouseenter)="emailHover = true"
+          (mouseleave)="emailHover = false"
+        >
+          <img
+            [src]="emailHover ? 'assets/icon _email_ 02.svg' : 'assets/icon _email_.svg'"
+            class="contact__info-icon"
+            alt=""
+            aria-hidden="true"
+          />
+        </span>
+        E-mail: mustermail@gmail.com
+      </p>
+      <p class="contact__info-item">
+        <span
+          class="contact__info-icon-wrap"
+          (mouseenter)="phoneHover = true"
+          (mouseleave)="phoneHover = false"
+        >
+          <img
+            [src]="phoneHover ? 'assets/icon _phone_ 02.svg' : 'assets/icon _phone_.svg'"
+            class="contact__info-icon"
+            alt=""
+            aria-hidden="true"
+          />
+        </span>
+        Tel: 0157 123 456 68
+      </p>
+    </div>
+
+    <a class="contact__scroll-up" href="#hero" aria-label="Back to top">
+      <img src="assets/arrow-up-small.svg" alt="red arrow pointing up" aria-hidden="true" />
+    </a>
+  </div>
+
+  <form class="contact__form">
+    <div class="contact__fields">
+      <div class="contact__inputs">
+        <input class="contact__input" type="text" name="name" placeholder="Your Name" />
+        <input class="contact__input" type="email" name="email" placeholder="Your Email" />
+      </div>
+
+      <textarea class="contact__textarea" name="message" placeholder="Your Message"></textarea>
+    </div>
+
+    <div class="contact__footer-row">
+      <label class="contact__checkbox">
+        <input type="checkbox" name="privacy" />
+        I've read the
+        <a class="contact__privacy-link" routerLink="/privacy-policy">privacy policy</a>
+        and agree to the processing of my data as outlined.
+      </label>
+
+      <button type="submit" class="contact__submit">Send</button>
+    </div>
+  </form>
+</section>
