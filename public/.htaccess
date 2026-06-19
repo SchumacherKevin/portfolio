@@ -1,0 +1,32 @@
+# .htaccess ist eine Konfigurationsdatei für den Webserver.
+# Sie liegt direkt in einem Verzeichnis (z. B. im Hauptordner der Webseite)
+# und erlaubt es, serverseitige Einstellungen ohne Zugriff auf die zentrale
+# Server-Konfiguration zu ändern – z. B. URL-Umschreibungen (Rewrites),
+# Zugriffsbeschränkungen, Weiterleitungen oder Caching-Regeln.
+# Die Datei wird bei jeder Anfrage automatisch vom Webserver eingelesen.
+
+# Aktiviert die Rewrite-Engine von Apache, damit RewriteCond/RewriteRule überhaupt funktionieren
+RewriteEngine On
+
+# Prüft, ob die angeforderte Datei existiert und keine Größe von 0 Byte (leer) hat (-s = "regular file, not empty")
+# [OR] bedeutet: wenn diese Bedingung ODER die nächste zutrifft, wird die Regel angewendet
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+
+# Prüft, ob es sich um einen symbolischen Link (z.b Verknüpfung) handelt (-l = "symbolic link")
+# auch hier [OR], also Verknüpfung mit der nächsten Bedingung
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+
+# Prüft, ob es sich um ein existierendes Verzeichnis handelt (-d = "directory")
+# kein [OR] mehr nötig, da dies die letzte Bedingung in der Kette ist
+RewriteCond %{REQUEST_FILENAME} -d
+
+# Wenn eine der obigen Bedingungen zutrifft (Datei, Symlink oder Verzeichnis existiert),
+# wird die Anfrage unverändert durchgelassen ("-" = keine Umschreibung)
+# [NC] = Groß-/Kleinschreibung wird ignoriert, [L] = letzte Regel, weitere Regeln werden nicht mehr geprüft
+RewriteRule ^.*$ - [NC,L]
+
+# Falls keine der obigen Bedingungen zutraf (die Datei/das Verzeichnis existiert also nicht real),
+# wird JEDE Anfrage auf /index.html umgeleitet (intern, ohne Browser-Redirect)
+# Das ist typisch für Single-Page-Applications (z. B. React, Vue, Angular),
+# damit das Routing clientseitig von JavaScript übernommen wird
+RewriteRule ^(.*) /index.html [NC,L]
