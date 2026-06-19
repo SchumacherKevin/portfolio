@@ -11,8 +11,8 @@
 
   <div class="contact__top">
     <p class="contact__description">
-      Got a project in mind or an open role? I'd love to hear about it — let's build something
-      great together.
+      Got a project in mind or an open role? I'd love to hear about it — let's build something great
+      together.
     </p>
 
     <div class="contact__info">
@@ -53,25 +53,115 @@
     </a>
   </div>
 
-  <form class="contact__form">
+  <form
+    class="contact__form"
+    [formGroup]="sendMailForm"
+    (ngSubmit)="submitsendMailForm()"
+    novalidate
+  >
     <div class="contact__fields">
       <div class="contact__inputs">
-        <input class="contact__input" type="text" name="name" placeholder="Your Name" />
-        <input class="contact__input" type="email" name="email" placeholder="Your Email" />
+        <div class="contact__field">
+          <div class="contact__input-wrap">
+            <input
+              class="contact__input"
+              type="text"
+              name="name"
+              formControlName="senderName"
+              placeholder="Your Name"
+              [class.contact__input--invalid]="isInvalid('senderName')"
+              [class.contact__input--valid]="isValid('senderName')"
+            />
+            @if (isInvalid('senderName')) {
+              <span class="contact__input-icon contact__input-icon--invalid">!</span>
+            }
+            @if (isValid('senderName')) {
+              <span class="contact__input-icon contact__input-icon--valid">✓</span>
+            }
+          </div>
+          @if (isInvalid('senderName')) {
+            <p class="contact__error">Your name is required.</p>
+          }
+        </div>
+
+        <div class="contact__field">
+          <div class="contact__input-wrap">
+            <input
+              class="contact__input"
+              type="email"
+              name="email"
+              formControlName="email"
+              placeholder="Your Email"
+              [class.contact__input--invalid]="isInvalid('email')"
+              [class.contact__input--valid]="isValid('email')"
+            />
+            @if (isInvalid('email')) {
+              <span class="contact__input-icon contact__input-icon--invalid">!</span>
+            }
+            @if (isValid('email')) {
+              <span class="contact__input-icon contact__input-icon--valid">✓</span>
+            }
+          </div>
+          @if (isInvalid('email')) {
+            <p class="contact__error">{{ emailErrorMessage() }}</p>
+          }
+        </div>
       </div>
 
-      <textarea class="contact__textarea" name="message" placeholder="Your Message"></textarea>
+      <div class="contact__field contact__field--message">
+        <div class="contact__input-wrap">
+          <textarea
+            class="contact__textarea"
+            name="message"
+            formControlName="message"
+            placeholder="Your Message"
+            [class.contact__input--invalid]="isInvalid('message')"
+            [class.contact__input--valid]="isValid('message')"
+          ></textarea>
+          @if (isInvalid('message')) {
+            <span class="contact__input-icon contact__input-icon--invalid">!</span>
+          }
+          @if (isValid('message')) {
+            <span class="contact__input-icon contact__input-icon--valid">✓</span>
+          }
+        </div>
+        @if (isInvalid('message')) {
+          <p class="contact__error">Your message is required.</p>
+        }
+      </div>
     </div>
 
     <div class="contact__footer-row">
-      <label class="contact__checkbox">
-        <input type="checkbox" name="privacy" />
-        I've read the
-        <a class="contact__privacy-link" routerLink="/privacy-policy">privacy policy</a>
-        and agree to the processing of my data as outlined.
-      </label>
+      <div class="contact__checkbox-field">
+        <label class="contact__checkbox">
+          <input
+            type="checkbox"
+            name="privacy"
+            formControlName="privacy"
+            [class.contact__checkbox-input--invalid]="isInvalid('privacy')"
+            [class.contact__checkbox-input--valid]="isValid('privacy')"
+          />
+          I've read the
+          <a class="contact__privacy-link" routerLink="/privacy-policy">privacy policy</a>
+          and agree to the processing of my data as outlined.
+        </label>
+        @if (isInvalid('privacy')) {
+          <p class="contact__error">Please accept the privacy policy.</p>
+        }
+      </div>
 
-      <button type="submit" class="contact__submit">Send</button>
+      <button type="submit" class="contact__submit" [disabled]="sending || sendMailForm.invalid">
+        {{ sending ? 'Sending…' : 'Send' }}
+      </button>
     </div>
+
+    @if (submitStatus === 'success') {
+      <p class="contact__status contact__status--success">Thanks! Your message has been sent.</p>
+    }
+    @if (submitStatus === 'error') {
+      <p class="contact__status contact__status--error">
+        Something went wrong. Please check your input and try again.
+      </p>
+    }
   </form>
 </section>

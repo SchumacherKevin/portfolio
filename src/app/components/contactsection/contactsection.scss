@@ -112,8 +112,28 @@
   gap: $spacing-4;
 }
 
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-1;
+}
+
+.contact__field--message {
+  height: 100%;
+}
+
+.contact__input-wrap {
+  position: relative;
+  display: flex;
+}
+
+.contact__field--message .contact__input-wrap {
+  height: 100%;
+}
+
 .contact__input,
 .contact__textarea {
+  width: 100%;
   font-family: $font-family-base;
   font-size: $font-size-sm;
   color: $color-third;
@@ -121,6 +141,7 @@
   border: 1px solid $color-third;
   border-radius: $radius-sm;
   padding: $spacing-3 $spacing-4;
+  padding-right: $spacing-8;
 
   &::placeholder {
     color: rgba($color-third, 0.6);
@@ -130,6 +151,16 @@
     outline: none;
     border-color: $color-second;
   }
+}
+
+.contact__input--invalid,
+.contact__input--invalid:focus {
+  border-color: $color-second;
+}
+
+.contact__input--valid,
+.contact__input--valid:focus {
+  border-color: $color-third;
 }
 
 .contact__input {
@@ -143,12 +174,46 @@
   font-family: $font-family-base;
 }
 
+.contact__input-icon {
+  position: absolute;
+  top: $spacing-3;
+  right: $spacing-4;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+}
+
+.contact__input-icon--invalid {
+  color: $color-second;
+}
+
+.contact__input-icon--valid {
+  color: $color-third;
+}
+
+.contact__error {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $color-second;
+}
+
 // ── Footer row: checkbox + submit ─────────────────────────────────────────────
 .contact__footer-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: $spacing-6;
+}
+
+.contact__footer-row .contact__submit {
+  margin-top: $spacing-1;
+}
+
+.contact__checkbox-field {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-1;
 }
 
 .contact__checkbox {
@@ -164,8 +229,19 @@
     width: 14px;
     height: 14px;
     flex-shrink: 0;
-    accent-color: $color-second;
+    accent-color: $color-third;
     border: 1px solid $color-second;
+    outline-offset: 2px;
+  }
+
+  .contact__checkbox-input--invalid {
+    accent-color: $color-second;
+    outline: 1px solid $color-second;
+  }
+
+  .contact__checkbox-input--valid {
+    accent-color: $color-third;
+    outline: 1px solid $color-third;
   }
 }
 
@@ -195,6 +271,25 @@
   &:hover {
     color: $color-third;
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.contact__status {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
+
+.contact__status--success {
+  color: $color-third;
+}
+
+.contact__status--error {
+  color: $color-second;
 }
 
 // ── Responsive ─────────────────────────────────────────────────────────────────

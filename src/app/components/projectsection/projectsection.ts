@@ -26,7 +26,7 @@ export class Projectsection {
       image: 'assets/join.png',
       imageAlt: 'Join project screenshot',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/SchumacherKevin',
       liveUrl: '#',
       imageLeft: true
     },
@@ -36,7 +36,7 @@ export class Projectsection {
       image: 'assets/pokedex.png',
       imageAlt: 'Pokedex project screenshot',
       technologies: ['JavaScript', 'HTML', 'CSS'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/SchumacherKevin/Pokedex.git',
       liveUrl: '#',
       imageLeft: false
     },
@@ -46,7 +46,7 @@ export class Projectsection {
       image: 'assets/el-pollo-loco.png',
       imageAlt: 'El Pollo Loco project screenshot',
       technologies: ['JavaScript', 'HTML', 'CSS'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/SchumacherKevin/El-Pollo-Locco.git',
       liveUrl: '#',
       imageLeft: true
     }
