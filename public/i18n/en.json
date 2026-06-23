@@ -1,0 +1,180 @@
+{
+  "HEADER": {
+    "NAV": {
+      "ABOUT": "Why me",
+      "SKILLS": "Skills",
+      "PROJECTS": "Projects",
+      "CONTACT": "Contact"
+    }
+  },
+  "HERO": {
+    "CONTACT_ME": "CONTACT ME",
+    "SUBTITLE": "FULLSTACK DEVELOPER"
+  },
+  "PERSONAL": {
+    "TITLE": "Why me",
+    "DESCRIPTION": "My path into IT wasn't traditional, but my drive to solve problems and keep learning was always there. Today, as a full-stack developer, that mindset shows up in every project: understand the problem, build a solid solution, and never stop improving.",
+    "I_AM": "I am",
+    "LOCATION": "located<br>in Kaiserslautern",
+    "RELOCATE": "open to<br>relocate",
+    "REMOTE": "open to<br>work remote",
+    "CTA": "Let's talk"
+  },
+  "SKILLS": {
+    "TITLE": "My Skills",
+    "CHALLENGE_ME": "Challenge me"
+  },
+  "PROJECTS": {
+    "TITLE": "My Projects",
+    "GITHUB": "GitHub",
+    "LIVE_TEST": "Live Test",
+    "ITEMS": {
+      "JOIN": {
+        "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "POKEDEX": {
+        "DESCRIPTION": "Browse and search all Pokémon using the PokéAPI. Displays types, stats and details in a responsive, interactive card interface."
+      },
+      "ELPOLLOLOCO": {
+        "DESCRIPTION": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "TITLE": "Need a teamplayer? Here's what my colleagues say about me",
+    "ITEMS": {
+      "NOAH": {
+        "PROJECT": "Project Sharkie",
+        "QUOTE": "Kevin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person."
+      },
+      "EVELYN": {
+        "PROJECT": "Project Pollo Loco",
+        "QUOTE": "He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code."
+      },
+      "JAMES": {
+        "PROJECT": "Project Join",
+        "QUOTE": "He is a reliable and friendly person. Work in a structured way and write clear code. I recommend him as a colleague."
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact me",
+    "DESCRIPTION": "Got a project in mind or an open role? I'd love to hear about it — let's build something great together.",
+    "EMAIL_LABEL": "E-mail:",
+    "PHONE_LABEL": "Tel:",
+    "FORM": {
+      "NAME_PLACEHOLDER": "Your Name",
+      "EMAIL_PLACEHOLDER": "Your Email",
+      "MESSAGE_PLACEHOLDER": "Your Message",
+      "NAME_REQUIRED": "Your name is required.",
+      "EMAIL_REQUIRED": "Your email is required.",
+      "EMAIL_INVALID": "Please enter a valid email address.",
+      "MESSAGE_REQUIRED": "Your message is required.",
+      "PRIVACY_PREFIX": "I've read the",
+      "PRIVACY_LINK": "privacy policy",
+      "PRIVACY_SUFFIX": "and agree to the processing of my data as outlined.",
+      "PRIVACY_REQUIRED": "Please accept the privacy policy.",
+      "SEND": "Send",
+      "SENDING": "Sending…",
+      "SUCCESS": "Thanks! Your message has been sent.",
+      "ERROR": "Something went wrong. Please check your input and try again."
+    }
+  },
+  "FOOTER": {
+    "COPY": "© Kevin Schumacher 2026",
+    "LEGAL_NOTICE": "Legal notice",
+    "PRIVACY_POLICY": "Privacy policy"
+  },
+  "LEGAL": {
+    "TITLE": "Legal Notice",
+    "IMPRINT": {
+      "HEADING": "Imprint",
+      "NAME": "Kevin Michael Schumacher",
+      "ADDRESS": "[Address of the JOIN operator - e.g. one of the students]"
+    },
+    "CONTACT": {
+      "HEADING": "Exploring the Board",
+      "EMAIL": "Email: KevinSchumacher@t-online.de"
+    },
+    "ACCEPTANCE": {
+      "HEADING": "Acceptance of terms",
+      "TEXT": "By accessing and using <span class=\"policy__accent\">Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice."
+    },
+    "SCOPE": {
+      "HEADING": "Scope and ownership of the product",
+      "TEXT1": "<span class=\"policy__accent\">Portfolio</span> has been developed as part of a student group project in a web development bootcamp at the <span class=\"policy__accent\">Developer Akademie GmbH</span>. It has an educational purpose and is not intended for extensive personal &amp; business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+      "TEXT2": "The design of <span class=\"policy__accent\">Portfolio</span> is owned by the <span class=\"policy__accent\">Developer Akademie GmbH</span>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited."
+    },
+    "PROPRIETARY": {
+      "HEADING": "Proprietary rights",
+      "TEXT": "Aside from the design owned by <span class=\"policy__accent\">Developer Akademie GmbH</span>, we, the listed students, retain all proprietary rights in <span class=\"policy__accent\">Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information."
+    },
+    "USE": {
+      "HEADING": "Use of the product",
+      "TEXT": "<span class=\"policy__accent\">Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <span class=\"policy__accent\">Portfolio</span> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <span class=\"policy__accent\">Portfolio</span>."
+    },
+    "DISCLAIMER": {
+      "HEADING": "Disclaimer of warranties and limitation of liability",
+      "TEXT": "<span class=\"policy__accent\">Portfolio</span> is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the <span class=\"policy__accent\">Developer Akademie</span>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <span class=\"policy__accent\">Portfolio</span>."
+    },
+    "INDEMNITY": {
+      "HEADING": "Indemnity",
+      "TEXT1": "You agree to indemnify, defend and hold harmless us, the listed students, the <span class=\"policy__accent\">Developer Akademie</span>, and our affiliates, partners, officers, directors, agents, and employees, against any and all claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span class=\"policy__accent\">Portfolio</span> and/or your breach of this Legal Notice.",
+      "TEXT2": "For any questions or notices, please contact us at KevinSchumacher@t-online.de.",
+      "DATE": "Date: July 01, 2026"
+    }
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "CONTROLLER": {
+      "HEADING": "1. Controller",
+      "TEXT": "Responsible for data processing on this website:<br>Kevin Schumacher<br>E-mail: KevinSchumacher@t-online.de"
+    },
+    "GENERAL": {
+      "HEADING": "2. General Information",
+      "TEXT": "The protection of your personal data is important to me. This privacy policy explains what data is collected when you visit this website and how it is used. I process personal data in accordance with the EU General Data Protection Regulation (GDPR) and the German Federal Data Protection Act (BDSG)."
+    },
+    "AUTOMATIC": {
+      "HEADING": "3. Data Collected Automatically",
+      "INTRO": "When you visit this website, the server automatically records the following data in server log files:",
+      "ITEMS": [
+        "Browser type and version",
+        "Operating system",
+        "Referrer URL",
+        "Hostname of the accessing device",
+        "Date and time of the request",
+        "IP address (anonymised)"
+      ],
+      "OUTRO": "This data is not merged with other data sources. The legal basis for processing is Art. 6 (1) lit. f GDPR (legitimate interest in the secure and efficient provision of this website)."
+    },
+    "COOKIES": {
+      "HEADING": "4. Cookies",
+      "TEXT": "This website does not use cookies beyond those technically necessary for operation. No tracking or advertising cookies are set."
+    },
+    "CONTACT": {
+      "HEADING": "5. Contact",
+      "TEXT": "If you contact me via e-mail, the data you provide (name, e-mail address, message content) will be stored solely for the purpose of processing and responding to your enquiry. The legal basis is Art. 6 (1) lit. b GDPR (performance of a contract or pre-contractual measures). Your data will not be passed on to third parties."
+    },
+    "RIGHTS": {
+      "HEADING": "6. Your Rights",
+      "INTRO": "You have the right to:",
+      "ITEMS": [
+        "Access the personal data stored about you (Art. 15 GDPR)",
+        "Rectification of inaccurate data (Art. 16 GDPR)",
+        "Erasure of your data (Art. 17 GDPR)",
+        "Restriction of processing (Art. 18 GDPR)",
+        "Data portability (Art. 20 GDPR)",
+        "Object to processing (Art. 21 GDPR)"
+      ],
+      "OUTRO": "To exercise these rights, please contact me at the address stated above. You also have the right to lodge a complaint with a supervisory authority."
+    },
+    "HOSTING": {
+      "HEADING": "7. External Hosting",
+      "TEXT": "This website is hosted by an external service provider. The provider's servers are located within the EU. Personal data collected on this website may be stored on the provider's servers. A data processing agreement has been concluded with the hosting provider in accordance with Art. 28 GDPR."
+    },
+    "CHANGES": {
+      "HEADING": "8. Changes to This Policy",
+      "TEXT": "I reserve the right to update this privacy policy to reflect changes in legal requirements or changes to this website. The current version is always available on this page."
+    }
+  }
+}

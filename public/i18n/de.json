@@ -1,0 +1,180 @@
+{
+  "HEADER": {
+    "NAV": {
+      "ABOUT": "Über mich",
+      "SKILLS": "Skills",
+      "PROJECTS": "Projekte",
+      "CONTACT": "Kontakt"
+    }
+  },
+  "HERO": {
+    "CONTACT_ME": "KONTAKTIERE MICH",
+    "SUBTITLE": "FULLSTACK ENTWICKLER"
+  },
+  "PERSONAL": {
+    "TITLE": "Über mich",
+    "DESCRIPTION": "Mein Weg in die IT war nicht der klassische, aber der Antrieb, Probleme zu lösen und stetig weiterzulernen, war schon immer da. Heute, als Fullstack-Entwickler, zeigt sich diese Einstellung in jedem Projekt: das Problem verstehen, eine solide Lösung bauen und mich immer weiter verbessern.",
+    "I_AM": "Ich bin",
+    "LOCATION": "wohnhaft<br>in Kaiserslautern",
+    "RELOCATE": "offen für<br>einen Umzug",
+    "REMOTE": "offen für<br>Remote-Arbeit",
+    "CTA": "Lass uns reden"
+  },
+  "SKILLS": {
+    "TITLE": "Meine Skills",
+    "CHALLENGE_ME": "Fordere mich heraus"
+  },
+  "PROJECTS": {
+    "TITLE": "Meine Projekte",
+    "GITHUB": "GitHub",
+    "LIVE_TEST": "Live-Test",
+    "ITEMS": {
+      "JOIN": {
+        "DESCRIPTION": "Task-Manager nach dem Vorbild des Kanban-Systems. Aufgaben per Drag-and-Drop erstellen und organisieren, Nutzer und Kategorien zuweisen."
+      },
+      "POKEDEX": {
+        "DESCRIPTION": "Alle Pokémon mit der PokéAPI durchsuchen und finden. Zeigt Typen, Werte und Details in einer responsiven, interaktiven Kartenansicht."
+      },
+      "ELPOLLOLOCO": {
+        "DESCRIPTION": "Jump-and-Run-Spiel nach objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Soße zu finden, um gegen das verrückte Huhn zu kämpfen."
+      }
+    }
+  },
+  "TESTIMONIALS": {
+    "TITLE": "Brauchst du einen Teamplayer? Das sagen meine Kollegen über mich",
+    "ITEMS": {
+      "NOAH": {
+        "PROJECT": "Projekt Sharkie",
+        "QUOTE": "Kevin musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und liefern. Er ist eine zuverlässige und freundliche Person."
+      },
+      "EVELYN": {
+        "PROJECT": "Projekt Pollo Loco",
+        "QUOTE": "Er ist ein vertrauenswürdiger Teamplayer und kommt gut mit dem Stress von Deadlines zurecht. Strukturierte Arbeit und klarer Code."
+      },
+      "JAMES": {
+        "PROJECT": "Projekt Join",
+        "QUOTE": "Er ist eine zuverlässige und freundliche Person. Arbeitet strukturiert und schreibt klaren Code. Ich empfehle ihn als Kollegen."
+      }
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Kontaktiere mich",
+    "DESCRIPTION": "Du hast ein Projekt im Kopf oder eine offene Stelle? Ich freue mich, davon zu hören — lass uns gemeinsam etwas Großes erschaffen.",
+    "EMAIL_LABEL": "E-Mail:",
+    "PHONE_LABEL": "Tel:",
+    "FORM": {
+      "NAME_PLACEHOLDER": "Dein Name",
+      "EMAIL_PLACEHOLDER": "Deine E-Mail",
+      "MESSAGE_PLACEHOLDER": "Deine Nachricht",
+      "NAME_REQUIRED": "Bitte gib deinen Namen ein.",
+      "EMAIL_REQUIRED": "Bitte gib deine E-Mail-Adresse ein.",
+      "EMAIL_INVALID": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein.",
+      "PRIVACY_PREFIX": "Ich habe die",
+      "PRIVACY_LINK": "Datenschutzerklärung",
+      "PRIVACY_SUFFIX": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+      "PRIVACY_REQUIRED": "Bitte akzeptiere die Datenschutzerklärung.",
+      "SEND": "Senden",
+      "SENDING": "Wird gesendet…",
+      "SUCCESS": "Danke! Deine Nachricht wurde gesendet.",
+      "ERROR": "Etwas ist schiefgelaufen. Bitte überprüfe deine Eingaben und versuche es erneut."
+    }
+  },
+  "FOOTER": {
+    "COPY": "© Kevin Schumacher 2026",
+    "LEGAL_NOTICE": "Impressum",
+    "PRIVACY_POLICY": "Datenschutz"
+  },
+  "LEGAL": {
+    "TITLE": "Impressum",
+    "IMPRINT": {
+      "HEADING": "Angaben gemäß § 5 TMG",
+      "NAME": "Kevin Michael Schumacher",
+      "ADDRESS": "[Adresse des JOIN-Betreibers - z. B. eines der Studenten]"
+    },
+    "CONTACT": {
+      "HEADING": "Kontakt",
+      "EMAIL": "E-Mail: KevinSchumacher@t-online.de"
+    },
+    "ACCEPTANCE": {
+      "HEADING": "Annahme der Nutzungsbedingungen",
+      "TEXT": "Durch den Zugriff auf und die Nutzung von <span class=\"policy__accent\">Portfolio</span> (Produkt) erkennst du die folgenden Geschäftsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen daran, die dir von Zeit zu Zeit vorgelegt werden können, an und stimmst ihnen zu. Wir, die genannten Studenten, können die Geschäftsbedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern."
+    },
+    "SCOPE": {
+      "HEADING": "Umfang und Eigentum am Produkt",
+      "TEXT1": "<span class=\"policy__accent\">Portfolio</span> wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp an der <span class=\"policy__accent\">Developer Akademie GmbH</span> entwickelt. Es dient einem Bildungszweck und ist nicht für eine umfassende private und geschäftliche Nutzung vorgesehen. Daher können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsaspekte dieses Produkts garantieren.",
+      "TEXT2": "Das Design von <span class=\"policy__accent\">Portfolio</span> liegt im Eigentum der <span class=\"policy__accent\">Developer Akademie GmbH</span>. Die unbefugte Nutzung, Reproduktion, Veränderung, Verbreitung oder Vervielfältigung des Designs ist strengstens untersagt."
+    },
+    "PROPRIETARY": {
+      "HEADING": "Eigentumsrechte",
+      "TEXT": "Abgesehen von dem Design, das im Eigentum der <span class=\"policy__accent\">Developer Akademie GmbH</span> steht, behalten wir, die genannten Studenten, alle Eigentumsrechte an <span class=\"policy__accent\">Portfolio</span>, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen Eigentumsinformationen."
+    },
+    "USE": {
+      "HEADING": "Nutzung des Produkts",
+      "TEXT": "<span class=\"policy__accent\">Portfolio</span> ist ausschließlich für rechtmäßige Zwecke im Einklang mit allen geltenden Gesetzen und Vorschriften bestimmt. Jede Nutzung von <span class=\"policy__accent\">Portfolio</span> für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Du bist allein verantwortlich für deine Interaktionen mit anderen Nutzern von <span class=\"policy__accent\">Portfolio</span>."
+    },
+    "DISCLAIMER": {
+      "HEADING": "Haftungsausschluss und Haftungsbeschränkung",
+      "TEXT": "<span class=\"policy__accent\">Portfolio</span> wird \"wie besehen\" ohne jegliche Gewährleistung, weder ausdrücklich noch stillschweigend, bereitgestellt; dies umfasst unter anderem die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. Wir, die genannten Studenten, oder die <span class=\"policy__accent\">Developer Akademie</span>, haften unter keinen Umständen für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Goodwill, Nutzung, Daten oder andere immaterielle Verluste, selbst wenn auf die Möglichkeit solcher Schäden hingewiesen wurde, die im Zusammenhang mit der Nutzung oder Leistung von <span class=\"policy__accent\">Portfolio</span> entstehen."
+    },
+    "INDEMNITY": {
+      "HEADING": "Freistellung",
+      "TEXT1": "Du verpflichtest dich, uns, die genannten Studenten, die <span class=\"policy__accent\">Developer Akademie</span> sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen und zu verteidigen, die sich aus deiner Nutzung von <span class=\"policy__accent\">Portfolio</span> und/oder einem Verstoß gegen dieses Impressum ergeben.",
+      "TEXT2": "Bei Fragen oder Mitteilungen kontaktiere uns bitte unter KevinSchumacher@t-online.de.",
+      "DATE": "Datum: 1. Juli 2026"
+    }
+  },
+  "PRIVACY": {
+    "TITLE": "Datenschutzerklärung",
+    "CONTROLLER": {
+      "HEADING": "1. Verantwortlicher",
+      "TEXT": "Verantwortlich für die Datenverarbeitung auf dieser Website:<br>Kevin Schumacher<br>E-Mail: KevinSchumacher@t-online.de"
+    },
+    "GENERAL": {
+      "HEADING": "2. Allgemeine Informationen",
+      "TEXT": "Der Schutz deiner personenbezogenen Daten ist mir wichtig. Diese Datenschutzerklärung erläutert, welche Daten beim Besuch dieser Website erhoben werden und wie sie verwendet werden. Ich verarbeite personenbezogene Daten in Übereinstimmung mit der EU-Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG)."
+    },
+    "AUTOMATIC": {
+      "HEADING": "3. Automatisch erfasste Daten",
+      "INTRO": "Beim Besuch dieser Website erfasst der Server automatisch folgende Daten in Server-Logdateien:",
+      "ITEMS": [
+        "Browsertyp und -version",
+        "Betriebssystem",
+        "Referrer-URL",
+        "Hostname des zugreifenden Geräts",
+        "Datum und Uhrzeit der Anfrage",
+        "IP-Adresse (anonymisiert)"
+      ],
+      "OUTRO": "Diese Daten werden nicht mit anderen Datenquellen zusammengeführt. Die Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und effizienten Bereitstellung dieser Website)."
+    },
+    "COOKIES": {
+      "HEADING": "4. Cookies",
+      "TEXT": "Diese Website verwendet keine Cookies, die über die technisch notwendigen für den Betrieb hinausgehen. Es werden keine Tracking- oder Werbe-Cookies gesetzt."
+    },
+    "CONTACT": {
+      "HEADING": "5. Kontakt",
+      "TEXT": "Wenn du mich per E-Mail kontaktierst, werden die von dir angegebenen Daten (Name, E-Mail-Adresse, Nachrichteninhalt) ausschließlich zur Bearbeitung und Beantwortung deiner Anfrage gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen). Deine Daten werden nicht an Dritte weitergegeben."
+    },
+    "RIGHTS": {
+      "HEADING": "6. Deine Rechte",
+      "INTRO": "Du hast das Recht auf:",
+      "ITEMS": [
+        "Auskunft über die zu deiner Person gespeicherten Daten (Art. 15 DSGVO)",
+        "Berichtigung unrichtiger Daten (Art. 16 DSGVO)",
+        "Löschung deiner Daten (Art. 17 DSGVO)",
+        "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+        "Datenübertragbarkeit (Art. 20 DSGVO)",
+        "Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)"
+      ],
+      "OUTRO": "Um diese Rechte auszuüben, kontaktiere mich bitte unter der oben angegebenen Adresse. Du hast außerdem das Recht, dich bei einer Aufsichtsbehörde zu beschweren."
+    },
+    "HOSTING": {
+      "HEADING": "7. Externes Hosting",
+      "TEXT": "Diese Website wird von einem externen Dienstleister gehostet. Die Server des Anbieters befinden sich innerhalb der EU. Auf dieser Website erhobene personenbezogene Daten können auf den Servern des Anbieters gespeichert werden. Mit dem Hosting-Anbieter wurde ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO abgeschlossen."
+    },
+    "CHANGES": {
+      "HEADING": "8. Änderungen dieser Erklärung",
+      "TEXT": "Ich behalte mir vor, diese Datenschutzerklärung zu aktualisieren, um Änderungen der rechtlichen Anforderungen oder dieser Website widerzuspiegeln. Die aktuelle Version ist immer auf dieser Seite verfügbar."
+    }
+  }
+}

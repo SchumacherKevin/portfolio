@@ -1,14 +1,20 @@
 <section class="skills" id="skills">
   <div class="skills__inner">
-    <h2 class="skills__heading">My Skills</h2>
+    <h2 class="skills__heading">{{ 'SKILLS.TITLE' | translate }}</h2>
 
     <div class="skills__grid">
       @for (skill of skills; track skill.label) {
         <div class="skills__item" [class.skills__item--challenge]="skill.challenge">
           <div class="skills__icon-wrap">
-            <img [src]="skill.icon" [alt]="skill.label" class="skills__icon" />
+            <img
+              [src]="skill.icon"
+              [alt]="skill.challenge ? (skill.label | translate) : skill.label"
+              class="skills__icon"
+            />
           </div>
-          <span class="skills__label">{{ skill.label }}</span>
+          <span class="skills__label">{{
+            skill.challenge ? (skill.label | translate) : skill.label
+          }}</span>
         </div>
       }
     </div>

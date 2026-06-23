@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-personalsection',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './personalsection.html',
   styleUrl: './personalsection.scss',
 })

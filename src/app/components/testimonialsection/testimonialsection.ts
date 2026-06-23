@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Testimonial {
   name: string;
-  project: string;
-  quote: string;
+  projectKey: string;
+  quoteKey: string;
 }
 
 @Component({
@@ -11,24 +12,24 @@ interface Testimonial {
   templateUrl: './testimonialsection.html',
   styleUrl: './testimonialsection.scss',
   standalone: true,
-  imports: []
+  imports: [TranslatePipe]
 })
 export class Testimonialsection {
   readonly testimonials: Testimonial[] = [
     {
       name: 'Noah Mueller',
-      project: 'Project Sharkie',
-      quote: 'Kevin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person.'
+      projectKey: 'TESTIMONIALS.ITEMS.NOAH.PROJECT',
+      quoteKey: 'TESTIMONIALS.ITEMS.NOAH.QUOTE'
     },
     {
       name: 'Evelyn Marx',
-      project: 'Project Pollo Loco',
-      quote: 'He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code.'
+      projectKey: 'TESTIMONIALS.ITEMS.EVELYN.PROJECT',
+      quoteKey: 'TESTIMONIALS.ITEMS.EVELYN.QUOTE'
     },
     {
       name: 'James Rugman',
-      project: 'Project Join',
-      quote: 'He is a reliable and friendly person. Work in a structured way and write clear code. I recommend him as a colleague.'
+      projectKey: 'TESTIMONIALS.ITEMS.JAMES.PROJECT',
+      quoteKey: 'TESTIMONIALS.ITEMS.JAMES.QUOTE'
     }
   ];
 }

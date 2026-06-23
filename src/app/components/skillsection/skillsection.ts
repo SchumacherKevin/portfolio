@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Skill {
   label: string;
@@ -9,6 +10,7 @@ interface Skill {
 @Component({
   selector: 'app-skillsection',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './skillsection.html',
   styleUrl: './skillsection.scss',
 })
@@ -24,6 +26,6 @@ export class Skillsection {
     { label: 'Git', icon: 'assets/git-icon.svg' },
     { label: 'Scrum', icon: 'assets/scrum-icon.svg' },
     { label: 'Material design', icon: 'assets/materialdesign-icon.svg' },
-    { label: 'Challenge me', icon: 'assets/question-box-icon.svg', challenge: true },
+    { label: 'SKILLS.CHALLENGE_ME', icon: 'assets/question-box-icon.svg', challenge: true },
   ];
 }

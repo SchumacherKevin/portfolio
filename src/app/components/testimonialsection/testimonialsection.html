@@ -1,5 +1,5 @@
 <section class="testimonials" id="testimonials">
-  <h2 class="testimonials__title">Need a teamplayer? Here's what my colleagues say about me</h2>
+  <h2 class="testimonials__title">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
 
   <div class="testimonials__body">
     <img
@@ -13,8 +13,8 @@
       @for (item of testimonials; track item.name) {
         <div class="testimonials__card">
           <h3 class="testimonials__name">{{ item.name }}</h3>
-          <p class="testimonials__project">{{ item.project }}</p>
-          <p class="testimonials__quote">'' {{ item.quote }} ''</p>
+          <p class="testimonials__project">{{ item.projectKey | translate }}</p>
+          <p class="testimonials__quote">'' {{ item.quoteKey | translate }} ''</p>
         </div>
       }
     </div>

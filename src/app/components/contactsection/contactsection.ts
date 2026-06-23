@@ -1,16 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactsection',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, TranslatePipe],
   templateUrl: './contactsection.html',
   styleUrl: './contactsection.scss',
 })
 export class Contactsection {
   private readonly formBuilder = inject(FormBuilder);
+  private readonly translate = inject(TranslateService);
 
   emailHover = false;
   phoneHover = false;
@@ -38,8 +40,8 @@ export class Contactsection {
 
   emailErrorMessage(): string {
     const control = this.sendMailForm.get('email');
-    if (control?.hasError('required')) return 'Your email is required.';
-    if (control?.hasError('email')) return 'Please enter a valid email address.';
+    if (control?.hasError('required')) return this.translate.instant('CONTACT.FORM.EMAIL_REQUIRED');
+    if (control?.hasError('email')) return this.translate.instant('CONTACT.FORM.EMAIL_INVALID');
     return '';
   }
 

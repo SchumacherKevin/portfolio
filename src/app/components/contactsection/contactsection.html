@@ -1,6 +1,6 @@
 <section class="contact" id="contact">
   <h2 class="contact__title">
-    Contact me
+    {{ 'CONTACT.TITLE' | translate }}
     <img
       src="assets/arrow-curved-red big-02.svg"
       class="contact__title-arrow"
@@ -10,10 +10,7 @@
   </h2>
 
   <div class="contact__top">
-    <p class="contact__description">
-      Got a project in mind or an open role? I'd love to hear about it — let's build something great
-      together.
-    </p>
+    <p class="contact__description">{{ 'CONTACT.DESCRIPTION' | translate }}</p>
 
     <div class="contact__info">
       <p class="contact__info-item">
@@ -29,7 +26,7 @@
             aria-hidden="true"
           />
         </span>
-        E-mail: KevinSchumacher@t-online.de
+        {{ 'CONTACT.EMAIL_LABEL' | translate }} KevinSchumacher@t-online.de
       </p>
       <p class="contact__info-item">
         <span
@@ -44,7 +41,7 @@
             aria-hidden="true"
           />
         </span>
-        Tel: 0151 42461120
+        {{ 'CONTACT.PHONE_LABEL' | translate }} 0151 42461120
       </p>
     </div>
 
@@ -68,7 +65,7 @@
               type="text"
               name="name"
               formControlName="senderName"
-              placeholder="Your Name"
+              [placeholder]="'CONTACT.FORM.NAME_PLACEHOLDER' | translate"
               [class.contact__input--invalid]="isInvalid('senderName')"
               [class.contact__input--valid]="isValid('senderName')"
             />
@@ -80,7 +77,7 @@
             }
           </div>
           @if (isInvalid('senderName')) {
-            <p class="contact__error">Your name is required.</p>
+            <p class="contact__error">{{ 'CONTACT.FORM.NAME_REQUIRED' | translate }}</p>
           }
         </div>
 
@@ -91,7 +88,7 @@
               type="email"
               name="email"
               formControlName="email"
-              placeholder="Your Email"
+              [placeholder]="'CONTACT.FORM.EMAIL_PLACEHOLDER' | translate"
               [class.contact__input--invalid]="isInvalid('email')"
               [class.contact__input--valid]="isValid('email')"
             />
@@ -114,7 +111,7 @@
             class="contact__textarea"
             name="message"
             formControlName="message"
-            placeholder="Your Message"
+            [placeholder]="'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate"
             [class.contact__input--invalid]="isInvalid('message')"
             [class.contact__input--valid]="isValid('message')"
           ></textarea>
@@ -126,7 +123,7 @@
           }
         </div>
         @if (isInvalid('message')) {
-          <p class="contact__error">Your message is required.</p>
+          <p class="contact__error">{{ 'CONTACT.FORM.MESSAGE_REQUIRED' | translate }}</p>
         }
       </div>
     </div>
@@ -141,27 +138,29 @@
             [class.contact__checkbox-input--invalid]="isInvalid('privacy')"
             [class.contact__checkbox-input--valid]="isValid('privacy')"
           />
-          I've read the
-          <a class="contact__privacy-link" routerLink="/privacy-policy">privacy policy</a>
-          and agree to the processing of my data as outlined.
+          {{ 'CONTACT.FORM.PRIVACY_PREFIX' | translate }}
+          <a class="contact__privacy-link" routerLink="/privacy-policy">{{
+            'CONTACT.FORM.PRIVACY_LINK' | translate
+          }}</a>
+          {{ 'CONTACT.FORM.PRIVACY_SUFFIX' | translate }}
         </label>
         @if (isInvalid('privacy')) {
-          <p class="contact__error">Please accept the privacy policy.</p>
+          <p class="contact__error">{{ 'CONTACT.FORM.PRIVACY_REQUIRED' | translate }}</p>
         }
       </div>
 
       <button type="submit" class="contact__submit" [disabled]="sending || sendMailForm.invalid">
-        {{ sending ? 'Sending…' : 'Send' }}
+        {{ (sending ? 'CONTACT.FORM.SENDING' : 'CONTACT.FORM.SEND') | translate }}
       </button>
     </div>
 
     @if (submitStatus === 'success') {
-      <p class="contact__status contact__status--success">Thanks! Your message has been sent.</p>
+      <p class="contact__status contact__status--success">
+        {{ 'CONTACT.FORM.SUCCESS' | translate }}
+      </p>
     }
     @if (submitStatus === 'error') {
-      <p class="contact__status contact__status--error">
-        Something went wrong. Please check your input and try again.
-      </p>
+      <p class="contact__status contact__status--error">{{ 'CONTACT.FORM.ERROR' | translate }}</p>
     }
   </form>
 </section>

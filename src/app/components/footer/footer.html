@@ -9,8 +9,12 @@
     <div class="footer__center">
       <p class="footer__copy">&copy; Kevin Schumacher 2026</p>
       <nav class="footer__legal">
-        <a class="footer__legal-link" routerLink="/legal-notice">Legal notice</a>
-        <a class="footer__legal-link" routerLink="/privacy-policy">Privacy policy</a>
+        <a class="footer__legal-link" routerLink="/legal-notice">{{
+          'FOOTER.LEGAL_NOTICE' | translate
+        }}</a>
+        <a class="footer__legal-link" routerLink="/privacy-policy">{{
+          'FOOTER.PRIVACY_POLICY' | translate
+        }}</a>
       </nav>
     </div>
 

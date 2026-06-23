@@ -1,97 +1,57 @@
 <main class="policy">
   <div class="policy__inner">
-    <h1 class="policy__title">Privacy Policy</h1>
+    <h1 class="policy__title">{{ 'PRIVACY.TITLE' | translate }}</h1>
 
     <section class="policy__section">
-      <h2 class="policy__heading">1. Controller</h2>
-      <p class="policy__text">
-        Responsible for data processing on this website:<br />
-        Kevin Schumacher<br />
-        E-mail: KevinSchumacher@t-online.de
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.CONTROLLER.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'PRIVACY.CONTROLLER.TEXT' | translate"></p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">2. General Information</h2>
-      <p class="policy__text">
-        The protection of your personal data is important to me. This privacy policy explains what
-        data is collected when you visit this website and how it is used. I process personal data in
-        accordance with the EU General Data Protection Regulation (GDPR) and the German Federal Data
-        Protection Act (BDSG).
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.GENERAL.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.GENERAL.TEXT' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">3. Data Collected Automatically</h2>
-      <p class="policy__text">
-        When you visit this website, the server automatically records the following data in server
-        log files:
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.AUTOMATIC.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.AUTOMATIC.INTRO' | translate }}</p>
       <ul class="policy__list">
-        <li>Browser type and version</li>
-        <li>Operating system</li>
-        <li>Referrer URL</li>
-        <li>Hostname of the accessing device</li>
-        <li>Date and time of the request</li>
-        <li>IP address (anonymised)</li>
+        @for (item of 'PRIVACY.AUTOMATIC.ITEMS' | translate; track item) {
+          <li>{{ item }}</li>
+        }
       </ul>
-      <p class="policy__text">
-        This data is not merged with other data sources. The legal basis for processing is Art. 6
-        (1) lit. f GDPR (legitimate interest in the secure and efficient provision of this website).
-      </p>
+      <p class="policy__text">{{ 'PRIVACY.AUTOMATIC.OUTRO' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">4. Cookies</h2>
-      <p class="policy__text">
-        This website does not use cookies beyond those technically necessary for operation. No
-        tracking or advertising cookies are set.
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.COOKIES.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.COOKIES.TEXT' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">5. Contact</h2>
-      <p class="policy__text">
-        If you contact me via e-mail, the data you provide (name, e-mail address, message content)
-        will be stored solely for the purpose of processing and responding to your enquiry. The
-        legal basis is Art. 6 (1) lit. b GDPR (performance of a contract or pre-contractual
-        measures). Your data will not be passed on to third parties.
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.CONTACT.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.CONTACT.TEXT' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">6. Your Rights</h2>
-      <p class="policy__text">You have the right to:</p>
+      <h2 class="policy__heading">{{ 'PRIVACY.RIGHTS.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.RIGHTS.INTRO' | translate }}</p>
       <ul class="policy__list">
-        <li>Access the personal data stored about you (Art. 15 GDPR)</li>
-        <li>Rectification of inaccurate data (Art. 16 GDPR)</li>
-        <li>Erasure of your data (Art. 17 GDPR)</li>
-        <li>Restriction of processing (Art. 18 GDPR)</li>
-        <li>Data portability (Art. 20 GDPR)</li>
-        <li>Object to processing (Art. 21 GDPR)</li>
+        @for (item of 'PRIVACY.RIGHTS.ITEMS' | translate; track item) {
+          <li>{{ item }}</li>
+        }
       </ul>
-      <p class="policy__text">
-        To exercise these rights, please contact me at the address stated above. You also have the
-        right to lodge a complaint with a supervisory authority.
-      </p>
+      <p class="policy__text">{{ 'PRIVACY.RIGHTS.OUTRO' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">7. External Hosting</h2>
-      <p class="policy__text">
-        This website is hosted by an external service provider. The provider's servers are located
-        within the EU. Personal data collected on this website may be stored on the provider's
-        servers. A data processing agreement has been concluded with the hosting provider in
-        accordance with Art. 28 GDPR.
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.HOSTING.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.HOSTING.TEXT' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">8. Changes to This Policy</h2>
-      <p class="policy__text">
-        I reserve the right to update this privacy policy to reflect changes in legal requirements
-        or changes to this website. The current version is always available on this page.
-      </p>
+      <h2 class="policy__heading">{{ 'PRIVACY.CHANGES.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'PRIVACY.CHANGES.TEXT' | translate }}</p>
     </section>
   </div>
 </main>

@@ -1,96 +1,51 @@
 <main class="policy">
   <div class="policy__inner">
-    <h1 class="policy__title">Legal Notice</h1>
+    <h1 class="policy__title">{{ 'LEGAL.TITLE' | translate }}</h1>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Imprint</h2>
+      <h2 class="policy__heading">{{ 'LEGAL.IMPRINT.HEADING' | translate }}</h2>
       <ul class="policy__list policy__list--plain">
-        <li>Kevin Michael Schumacher</li>
-        <li>[Address of the JOIN operator - e.g. one of the students]</li>
+        <li>{{ 'LEGAL.IMPRINT.NAME' | translate }}</li>
+        <li>{{ 'LEGAL.IMPRINT.ADDRESS' | translate }}</li>
       </ul>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Exploring the Board</h2>
-      <p class="policy__text">Email: KevinSchumacher@t-online.de</p>
+      <h2 class="policy__heading">{{ 'LEGAL.CONTACT.HEADING' | translate }}</h2>
+      <p class="policy__text">{{ 'LEGAL.CONTACT.EMAIL' | translate }}</p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Acceptance of terms</h2>
-      <p class="policy__text">
-        By accessing and using <span class="policy__accent">Portfolio</span> (Product), you
-        acknowledge and agree to the following terms and conditions, and any policies, guidelines,
-        or amendments thereto that may be presented to you from time to time. We, the listed
-        students, may update or change the terms and conditions from time to time without notice.
-      </p>
+      <h2 class="policy__heading">{{ 'LEGAL.ACCEPTANCE.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'LEGAL.ACCEPTANCE.TEXT' | translate"></p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Scope and ownership of the product</h2>
-      <p class="policy__text">
-        <span class="policy__accent">Portfolio</span> has been developed as part of a student group
-        project in a web development bootcamp at the
-        <span class="policy__accent">Developer Akademie GmbH</span>. It has an educational purpose
-        and is not intended for extensive personal &amp; business usage. As such, we cannot
-        guarantee consistent availability, reliability, accuracy, or any other aspect of quality
-        regarding this Product.
-      </p>
-      <p class="policy__text">
-        The design of <span class="policy__accent">Portfolio</span> is owned by the
-        <span class="policy__accent">Developer Akademie GmbH</span>. Unauthorized use, reproduction,
-        modification, distribution, or replication of the design is strictly prohibited.
-      </p>
+      <h2 class="policy__heading">{{ 'LEGAL.SCOPE.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'LEGAL.SCOPE.TEXT1' | translate"></p>
+      <p class="policy__text" [innerHTML]="'LEGAL.SCOPE.TEXT2' | translate"></p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Proprietary rights</h2>
-      <p class="policy__text">
-        Aside from the design owned by
-        <span class="policy__accent">Developer Akademie GmbH</span>, we, the listed students, retain
-        all proprietary rights in <span class="policy__accent">Portfolio</span>, including any
-        associated copyrighted material, trademarks, and other proprietary information.
-      </p>
+      <h2 class="policy__heading">{{ 'LEGAL.PROPRIETARY.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'LEGAL.PROPRIETARY.TEXT' | translate"></p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Use of the product</h2>
-      <p class="policy__text">
-        <span class="policy__accent">Portfolio</span> is intended to be used for lawful purposes
-        only, in accordance with all applicable laws and regulations. Any use of
-        <span class="policy__accent">Portfolio</span> for illegal activities, or to harass, harm,
-        threaten, or intimidate another person, is strictly prohibited. You are solely responsible
-        for your interactions with other users of <span class="policy__accent">Portfolio</span>.
-      </p>
+      <h2 class="policy__heading">{{ 'LEGAL.USE.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'LEGAL.USE.TEXT' | translate"></p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Disclaimer of warranties and limitation of liability</h2>
-      <p class="policy__text">
-        <span class="policy__accent">Portfolio</span> is provided "as is" without warranty of any
-        kind, whether express or implied, including but not limited to the implied warranties of
-        merchantability, fitness for a particular purpose, and non-infringement. In no event will
-        we, the listed students, or the <span class="policy__accent">Developer Akademie</span>, be
-        liable for any direct, indirect, incidental, special, consequential or exemplary damages,
-        including but not limited to, damages for loss of profits, goodwill, use, data, or other
-        intangible losses, even if we have been advised of the possibility of such damages, arising
-        out of or in connection with the use or performance of
-        <span class="policy__accent">Portfolio</span>.
-      </p>
+      <h2 class="policy__heading">{{ 'LEGAL.DISCLAIMER.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'LEGAL.DISCLAIMER.TEXT' | translate"></p>
     </section>
 
     <section class="policy__section">
-      <h2 class="policy__heading">Indemnity</h2>
-      <p class="policy__text">
-        You agree to indemnify, defend and hold harmless us, the listed students, the
-        <span class="policy__accent">Developer Akademie</span>, and our affiliates, partners,
-        officers, directors, agents, and employees, against any and all claim, demand, loss, damage,
-        cost, or liability (including reasonable legal fees) arising out of or relating to your use
-        of <span class="policy__accent">Portfolio</span> and/or your breach of this Legal Notice.
-      </p>
-      <p class="policy__text">
-        For any questions or notices, please contact us at KevinSchumacher@t-online.de.
-      </p>
-      <p class="policy__text">Date: July 01, 2026</p>
+      <h2 class="policy__heading">{{ 'LEGAL.INDEMNITY.HEADING' | translate }}</h2>
+      <p class="policy__text" [innerHTML]="'LEGAL.INDEMNITY.TEXT1' | translate"></p>
+      <p class="policy__text">{{ 'LEGAL.INDEMNITY.TEXT2' | translate }}</p>
+      <p class="policy__text">{{ 'LEGAL.INDEMNITY.DATE' | translate }}</p>
     </section>
   </div>
 </main>

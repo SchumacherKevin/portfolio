@@ -5,16 +5,30 @@
     </a>
 
     <nav class="header__nav">
-      <a class="header__nav-link" href="#about">Why me</a>
-      <a class="header__nav-link" href="#skills">Skills</a>
-      <a class="header__nav-link" href="#projects">Projects</a>
-      <a class="header__nav-link" href="#contact">Contact</a>
+      <a class="header__nav-link" href="#about">{{ 'HEADER.NAV.ABOUT' | translate }}</a>
+      <a class="header__nav-link" href="#skills">{{ 'HEADER.NAV.SKILLS' | translate }}</a>
+      <a class="header__nav-link" href="#projects">{{ 'HEADER.NAV.PROJECTS' | translate }}</a>
+      <a class="header__nav-link" href="#contact">{{ 'HEADER.NAV.CONTACT' | translate }}</a>
     </nav>
 
     <div class="header__lang">
-      <button type="button" class="header__lang-btn header__lang-btn--active">DE</button>
+      <button
+        type="button"
+        class="header__lang-btn"
+        [class.header__lang-btn--active]="currentLang() === 'de'"
+        (click)="useLang('de')"
+      >
+        DE
+      </button>
       <span class="header__lang-divider">|</span>
-      <button type="button" class="header__lang-btn">EN</button>
+      <button
+        type="button"
+        class="header__lang-btn"
+        [class.header__lang-btn--active]="currentLang() === 'en'"
+        (click)="useLang('en')"
+      >
+        EN
+      </button>
     </div>
   </div>
 </header>

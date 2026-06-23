@@ -1,6 +1,5 @@
 <section class="hero" id="hero">
-
-  <a class="hero__contact" href="#contact">CONTACT ME</a>
+  <a class="hero__contact" href="#contact">{{ 'HERO.CONTACT_ME' | translate }}</a>
 
   <button class="hero__scroll-btn" (click)="scrollDown()" aria-label="Scroll down">
     <img src="assets/arrow-down-red.svg" alt="" />
@@ -11,8 +10,7 @@
   </div>
 
   <div class="hero__text">
-    <p class="hero__subtitle">FULLSTACK DEVELOPER</p>
+    <p class="hero__subtitle">{{ 'HERO.SUBTITLE' | translate }}</p>
     <h1 class="hero__name">Kevin Schumacher</h1>
   </div>
-
 </section>

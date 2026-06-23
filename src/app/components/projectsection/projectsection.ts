@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface Project {
   title: string;
-  description: string;
+  descriptionKey: string;
   image: string;
   imageAlt: string;
   technologies: string[];
@@ -16,13 +17,13 @@ interface Project {
   templateUrl: './projectsection.html',
   styleUrl: './projectsection.scss',
   standalone: true,
-  imports: []
+  imports: [TranslatePipe]
 })
 export class Projectsection {
   readonly projects: Project[] = [
     {
       title: 'Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionKey: 'PROJECTS.ITEMS.JOIN.DESCRIPTION',
       image: 'assets/join.png',
       imageAlt: 'Join project screenshot',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
@@ -32,7 +33,7 @@ export class Projectsection {
     },
     {
       title: 'Pokedex',
-      description: 'Browse and search all Pokémon using the PokéAPI. Displays types, stats and details in a responsive, interactive card interface.',
+      descriptionKey: 'PROJECTS.ITEMS.POKEDEX.DESCRIPTION',
       image: 'assets/pokedex.png',
       imageAlt: 'Pokedex project screenshot',
       technologies: ['JavaScript', 'HTML', 'CSS'],
@@ -42,7 +43,7 @@ export class Projectsection {
     },
     {
       title: 'El Pollo Loco',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      descriptionKey: 'PROJECTS.ITEMS.ELPOLLOLOCO.DESCRIPTION',
       image: 'assets/el-pollo-loco.png',
       imageAlt: 'El Pollo Loco project screenshot',
       technologies: ['JavaScript', 'HTML', 'CSS'],

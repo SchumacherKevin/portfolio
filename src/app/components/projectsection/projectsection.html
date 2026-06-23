@@ -1,5 +1,5 @@
 <section class="projects" id="projects">
-  <h2 class="projects__title">My Projects</h2>
+  <h2 class="projects__title">{{ 'PROJECTS.TITLE' | translate }}</h2>
 
   <div class="projects__list">
     @for (project of projects; track project.title) {
@@ -11,21 +11,21 @@
         <div class="projects__content">
           <h3 class="projects__name">{{ project.title }}</h3>
           <p class="projects__tech">{{ project.technologies.join(' | ') }}</p>
-          <p class="projects__description">{{ project.description }}</p>
+          <p class="projects__description">{{ project.descriptionKey | translate }}</p>
           <div class="projects__actions">
             <a
               class="projects__btn projects__btn--outline"
               [href]="project.githubUrl"
               target="_blank"
               rel="noopener noreferrer"
-              >GitHub</a
+              >{{ 'PROJECTS.GITHUB' | translate }}</a
             >
             <a
               class="projects__btn projects__btn--filled"
               [href]="project.liveUrl"
               target="_blank"
               rel="noopener noreferrer"
-              >Live Test</a
+              >{{ 'PROJECTS.LIVE_TEST' | translate }}</a
             >
           </div>
         </div>

@@ -4,18 +4,14 @@
   </div>
 
   <div class="personal__content">
-    <h2 class="personal__title">Why me</h2>
+    <h2 class="personal__title">{{ 'PERSONAL.TITLE' | translate }}</h2>
 
-    <p class="personal__description">
-      My path into IT wasn't traditional, but my drive to solve problems and keep learning was
-      always there. Today, as a full-stack developer, that mindset shows up in every project:
-      understand the problem, build a solid solution, and never stop improving.
-    </p>
+    <p class="personal__description">{{ 'PERSONAL.DESCRIPTION' | translate }}</p>
 
     <div class="personal__iam-container">
       <!-- Div 1: I am + location -->
       <div class="personal__iam-location">
-        <span class="personal__iam-label">I am</span>
+        <span class="personal__iam-label">{{ 'PERSONAL.I_AM' | translate }}</span>
         <div class="personal__node personal__node--location">
           <div class="personal__node-icon-wrap">
             <img src="assets/vector.svg" class="personal__node-icon" alt="" />
@@ -26,7 +22,7 @@
               aria-hidden="true"
             />
           </div>
-          <span class="personal__node-text">located<br />in Kaiserslautern</span>
+          <span class="personal__node-text" [innerHTML]="'PERSONAL.LOCATION' | translate"></span>
         </div>
       </div>
 
@@ -50,7 +46,7 @@
               alt="Open to relocate"
             />
           </div>
-          <span class="personal__node-text">open to<br />relocate</span>
+          <span class="personal__node-text" [innerHTML]="'PERSONAL.RELOCATE' | translate"></span>
         </div>
       </div>
 
@@ -69,7 +65,7 @@
                 alt="Open to work remote"
               />
             </div>
-            <span class="personal__node-text">open to<br />work remote</span>
+            <span class="personal__node-text" [innerHTML]="'PERSONAL.REMOTE' | translate"></span>
           </div>
           <img
             src="assets/arrowwhyme.svg"
@@ -87,6 +83,6 @@
       </div>
     </div>
 
-    <a href="#contact" class="personal__cta">Let's talk</a>
+    <a href="#contact" class="personal__cta">{{ 'PERSONAL.CTA' | translate }}</a>
   </div>
 </section>
