@@ -4,31 +4,54 @@
       <img src="assets/ks-icon.png" alt="KS Logo" class="header__logo-img" />
     </a>
 
-    <nav class="header__nav">
-      <a class="header__nav-link" href="#about">{{ 'HEADER.NAV.ABOUT' | translate }}</a>
-      <a class="header__nav-link" href="#skills">{{ 'HEADER.NAV.SKILLS' | translate }}</a>
-      <a class="header__nav-link" href="#projects">{{ 'HEADER.NAV.PROJECTS' | translate }}</a>
-      <a class="header__nav-link" href="#contact">{{ 'HEADER.NAV.CONTACT' | translate }}</a>
-    </nav>
+    <button
+      type="button"
+      class="header__burger"
+      [class.header__burger--open]="menuOpen()"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <div class="header__lang">
-      <button
-        type="button"
-        class="header__lang-btn"
-        [class.header__lang-btn--active]="currentLang() === 'de'"
-        (click)="useLang('de')"
-      >
-        DE
-      </button>
-      <span class="header__lang-divider">|</span>
-      <button
-        type="button"
-        class="header__lang-btn"
-        [class.header__lang-btn--active]="currentLang() === 'en'"
-        (click)="useLang('en')"
-      >
-        EN
-      </button>
+    <div class="header__menu" [class.header__menu--open]="menuOpen()">
+      <nav class="header__nav">
+        <a class="header__nav-link" href="#about" (click)="closeMenu()">{{
+          'HEADER.NAV.ABOUT' | translate
+        }}</a>
+        <a class="header__nav-link" href="#skills" (click)="closeMenu()">{{
+          'HEADER.NAV.SKILLS' | translate
+        }}</a>
+        <a class="header__nav-link" href="#projects" (click)="closeMenu()">{{
+          'HEADER.NAV.PROJECTS' | translate
+        }}</a>
+        <a class="header__nav-link" href="#contact" (click)="closeMenu()">{{
+          'HEADER.NAV.CONTACT' | translate
+        }}</a>
+      </nav>
+
+      <div class="header__lang">
+        <button
+          type="button"
+          class="header__lang-btn"
+          [class.header__lang-btn--active]="currentLang() === 'de'"
+          (click)="useLang('de')"
+        >
+          DE
+        </button>
+        <span class="header__lang-divider">|</span>
+        <button
+          type="button"
+          class="header__lang-btn"
+          [class.header__lang-btn--active]="currentLang() === 'en'"
+          (click)="useLang('en')"
+        >
+          EN
+        </button>
+      </div>
     </div>
   </div>
 </header>

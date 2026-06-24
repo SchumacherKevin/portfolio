@@ -12,12 +12,23 @@
 }
 
 .header__inner {
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   padding: $spacing-4 $spacing-8;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+// ── Mobile menu wrapper (acts as a no-op on desktop) ─────────────────────────
+.header__menu {
+  display: contents;
+}
+
+// ── Hamburger toggle (hidden on desktop) ──────────────────────────────────────
+.header__burger {
+  display: none;
 }
 
 .header__logo {
@@ -108,11 +119,67 @@
 @media (max-width: $bp-sm) {
   .header__inner {
     padding: $spacing-3 $spacing-4;
+  }
+
+  .header__burger {
+    display: flex;
     flex-direction: column;
-    gap: $spacing-3;
+    justify-content: center;
+    gap: 5px;
+    width: 28px;
+    height: 22px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-second;
+      transition: $transition-fast;
+    }
+
+    &--open {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-4;
+    padding: $spacing-6 $spacing-4;
+    background-color: $color-main;
+    border-bottom: 1px solid rgba($color-third, 0.12);
+
+    &--open {
+      display: flex;
+    }
   }
 
   .header__nav {
+    flex-direction: column;
     gap: $spacing-4;
+  }
+
+  .header__nav-link {
+    font-size: $font-size-md;
   }
 }

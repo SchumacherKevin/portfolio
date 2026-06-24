@@ -37,7 +37,9 @@
 
   border: 1px solid $color-third;
 
-  transition: color $transition-fast, border-color $transition-fast;
+  transition:
+    color $transition-fast,
+    border-color $transition-fast;
 
   &:hover {
     color: $color-third;
@@ -68,8 +70,13 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 // ── Profile image ───────────────────────────────────────────────────────────
@@ -135,14 +142,54 @@
 
 @media (max-width: $bp-sm) {
   .hero {
-    grid-template-columns: 2.5rem 1fr 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    min-height: 100dvh;
+    gap: $spacing-6;
+    padding: $spacing-16 $spacing-4 $spacing-6;
+  }
+
+  .hero__contact,
+  .hero__scroll-btn {
+    display: none;
+  }
+
+  .hero__image-wrapper {
+    order: -1;
+    width: 220px;
+    height: 220px;
+    border-radius: $radius-full;
+    flex-shrink: 0;
   }
 
   .hero__image {
-    opacity: 0.3;
+    opacity: 1;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   .hero__text {
-    padding: 0 $spacing-4 $spacing-6 $spacing-4;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-2;
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    display: inline-flex;
+    border: 1px solid $color-third;
+    border-radius: $radius-full;
+    padding: $spacing-1 $spacing-4;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+  }
+
+  .hero__name {
+    font-size: $font-size-2xl;
   }
 }

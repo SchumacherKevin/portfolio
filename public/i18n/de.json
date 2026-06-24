@@ -14,10 +14,10 @@
   "PERSONAL": {
     "TITLE": "Über mich",
     "DESCRIPTION": "Mein Weg in die IT war nicht der klassische, aber der Antrieb, Probleme zu lösen und stetig weiterzulernen, war schon immer da. Heute, als Fullstack-Entwickler, zeigt sich diese Einstellung in jedem Projekt: das Problem verstehen, eine solide Lösung bauen und mich immer weiter verbessern.",
-    "I_AM": "Ich bin",
-    "LOCATION": "wohnhaft<br>in Kaiserslautern",
-    "RELOCATE": "offen für<br>einen Umzug",
-    "REMOTE": "offen für<br>Remote-Arbeit",
+    "I_AM": "Ich",
+    "LOCATION": "wohne<br>in Kaiserslautern",
+    "RELOCATE": "bin offen für<br>einen Umzug",
+    "REMOTE": "bin offen für<br>Remote-Arbeit",
     "CTA": "Lass uns reden"
   },
   "SKILLS": {

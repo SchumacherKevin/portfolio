@@ -340,3 +340,82 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: $bp-sm) {
+  .contact {
+    padding: $spacing-8 $spacing-4;
+  }
+
+  .contact__title {
+    font-size: $font-size-xl;
+    align-self: center;
+  }
+
+  .contact__title-arrow {
+    display: none;
+  }
+
+  // Lift .contact__top's children up to be direct children of .contact so
+  // they can be reordered (description → form → arrow → info) alongside it.
+  .contact__top {
+    display: contents;
+  }
+
+  .contact__description {
+    order: 1;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contact__form {
+    order: 2;
+  }
+
+  .contact__scroll-up {
+    order: 3;
+    position: static;
+    align-self: flex-end;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  .contact__info {
+    order: 4;
+    align-items: center;
+    gap: $spacing-6;
+  }
+
+  .contact__info-item {
+    flex-direction: column;
+    gap: $spacing-2;
+    font-weight: $font-weight-bold;
+  }
+
+  .contact__info-label {
+    display: none;
+  }
+
+  .contact__footer-row {
+    align-items: center;
+  }
+
+  .contact__checkbox {
+    display: block;
+    text-align: center;
+
+    input[type='checkbox'] {
+      vertical-align: middle;
+      margin-right: $spacing-2;
+    }
+  }
+
+  .contact__checkbox-field {
+    align-items: center;
+  }
+
+  .contact__submit {
+    align-self: center;
+  }
+}

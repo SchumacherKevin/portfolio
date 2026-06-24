@@ -105,3 +105,21 @@
     gap: $spacing-6;
   }
 }
+
+@media (max-width: $bp-sm) {
+  .testimonials {
+    padding: $spacing-8 $spacing-4;
+  }
+
+  .testimonials__title {
+    text-align: center;
+  }
+
+  .testimonials__body {
+    align-items: center;
+  }
+
+  .testimonials__card {
+    text-align: center;
+  }
+}

@@ -94,23 +94,41 @@
   }
 
   .skills__inner {
-    padding: 0 $spacing-4;
+    padding: 0;
   }
 
   .skills__heading {
     font-size: $font-size-2xl;
+    text-align: center;
   }
 
   .skills__grid {
-    gap: $spacing-6;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: $spacing-6 $spacing-2;
+    justify-items: center;
   }
 
   .skills__item {
-    width: 56px;
+    width: auto;
+    min-width: 0;
+    padding-right: 0;
   }
 
   .skills__icon-wrap {
     width: 52px;
     height: 52px;
+  }
+
+  .skills__label {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

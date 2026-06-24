@@ -28,7 +28,7 @@ export class Projectsection {
       imageAlt: 'Join project screenshot',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubUrl: 'https://github.com/SchumacherKevin',
-      liveUrl: '#',
+      liveUrl: 'https://projects.kevin-schumacher.de/join/',
       imageLeft: true
     },
     {
@@ -38,7 +38,7 @@ export class Projectsection {
       imageAlt: 'Pokedex project screenshot',
       technologies: ['JavaScript', 'HTML', 'CSS'],
       githubUrl: 'https://github.com/SchumacherKevin/Pokedex.git',
-      liveUrl: '#',
+      liveUrl: 'https://projects.kevin-schumacher.de/pokedex/',
       imageLeft: false
     },
     {
@@ -48,7 +48,7 @@ export class Projectsection {
       imageAlt: 'El Pollo Loco project screenshot',
       technologies: ['JavaScript', 'HTML', 'CSS'],
       githubUrl: 'https://github.com/SchumacherKevin/El-Pollo-Locco.git',
-      liveUrl: '#',
+      liveUrl: 'https://projects.kevin-schumacher.de/el-pollo-loco/',
       imageLeft: true
     }
   ];

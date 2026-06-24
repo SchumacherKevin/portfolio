@@ -171,3 +171,32 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: $bp-sm) {
+  .projects {
+    padding: $spacing-8 $spacing-4;
+  }
+
+  .projects__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-8;
+  }
+
+  .projects__content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .projects__item--reversed .projects__content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .projects__actions {
+    justify-content: center;
+  }
+
+  .projects__btn {
+    border-radius: $radius-full;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
@@ -12,8 +12,17 @@ export class HeaderComponent {
   private readonly translate = inject(TranslateService);
 
   readonly currentLang = this.translate.currentLang;
+  readonly menuOpen = signal(false);
 
   useLang(lang: string): void {
     this.translate.use(lang);
+  }
+
+  toggleMenu(): void {
+    this.menuOpen.set(!this.menuOpen());
+  }
+
+  closeMenu(): void {
+    this.menuOpen.set(false);
   }
 }
