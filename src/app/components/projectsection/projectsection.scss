@@ -127,6 +127,15 @@
       color: $color-second;
     }
   }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.4;
+
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 // ── Responsive ─────────────────────────────────────────────────────────────────

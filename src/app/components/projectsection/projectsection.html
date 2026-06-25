@@ -15,14 +15,18 @@
           <div class="projects__actions">
             <a
               class="projects__btn projects__btn--outline"
-              [href]="project.githubUrl"
+              [class.projects__btn--disabled]="project.disabled"
+              [href]="project.disabled ? null : project.githubUrl"
+              [attr.aria-disabled]="project.disabled"
               target="_blank"
               rel="noopener noreferrer"
               >{{ 'PROJECTS.GITHUB' | translate }}</a
             >
             <a
               class="projects__btn projects__btn--filled"
-              [href]="project.liveUrl"
+              [class.projects__btn--disabled]="project.disabled"
+              [href]="project.disabled ? null : project.liveUrl"
+              [attr.aria-disabled]="project.disabled"
               target="_blank"
               rel="noopener noreferrer"
               >{{ 'PROJECTS.LIVE_TEST' | translate }}</a

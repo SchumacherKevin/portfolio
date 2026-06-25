@@ -10,6 +10,7 @@ interface Project {
   githubUrl: string;
   liveUrl: string;
   imageLeft: boolean;
+  disabled?: boolean;
 }
 
 @Component({
@@ -29,7 +30,8 @@ export class Projectsection {
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubUrl: 'https://github.com/SchumacherKevin',
       liveUrl: 'https://projects.kevin-schumacher.de/join/',
-      imageLeft: true
+      imageLeft: true,
+      disabled: true
     },
     {
       title: 'Pokedex',
