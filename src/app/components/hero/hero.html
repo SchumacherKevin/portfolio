@@ -1,12 +1,14 @@
 <section class="hero" id="hero">
-  <a class="hero__contact" href="#contact">{{ 'HERO.CONTACT_ME' | translate }}</a>
+  <a class="hero__contact" href="#contact" appScrollTo="contact">{{
+    'HERO.CONTACT_ME' | translate
+  }}</a>
 
   <button class="hero__scroll-btn" (click)="scrollDown()" aria-label="Scroll down">
     <img src="assets/arrow-down-red.svg" alt="" />
   </button>
 
   <div class="hero__image-wrapper">
-    <img class="hero__image" src="assets/profilehero.JPG" alt="Kevin Schumacher" />
+    <img class="hero__image" src="assets/profile-hero.png" alt="Kevin Schumacher" />
   </div>
 
   <div class="hero__text">

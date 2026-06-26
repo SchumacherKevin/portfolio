@@ -19,16 +19,16 @@
 
     <div class="header__menu" [class.header__menu--open]="menuOpen()">
       <nav class="header__nav">
-        <a class="header__nav-link" href="#about" (click)="closeMenu()">{{
+        <a class="header__nav-link" routerLink="/" fragment="about" (click)="closeMenu()">{{
           'HEADER.NAV.ABOUT' | translate
         }}</a>
-        <a class="header__nav-link" href="#skills" (click)="closeMenu()">{{
+        <a class="header__nav-link" routerLink="/" fragment="skills" (click)="closeMenu()">{{
           'HEADER.NAV.SKILLS' | translate
         }}</a>
-        <a class="header__nav-link" href="#projects" (click)="closeMenu()">{{
+        <a class="header__nav-link" routerLink="/" fragment="projects" (click)="closeMenu()">{{
           'HEADER.NAV.PROJECTS' | translate
         }}</a>
-        <a class="header__nav-link" href="#contact" (click)="closeMenu()">{{
+        <a class="header__nav-link" routerLink="/" fragment="contact" (click)="closeMenu()">{{
           'HEADER.NAV.CONTACT' | translate
         }}</a>
       </nav>

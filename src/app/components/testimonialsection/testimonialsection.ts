@@ -14,7 +14,7 @@ interface Testimonial {
   standalone: true,
   imports: [TranslatePipe]
 })
-export class Testimonialsection {
+export class TestimonialSectionComponent {
   readonly testimonials: Testimonial[] = [
     {
       name: 'Noah Mueller',

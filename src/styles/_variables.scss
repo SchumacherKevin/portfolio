@@ -1,24 +1,35 @@
-// ─── Colors ───────────────────────────────────────────────────────────────────
+// -Colors-
+@use 'sass:color';
+
 $color-main: #13074e;
+$color-main-light: color.scale($color-main, $lightness: 22%);
 $color-second: #e15544;
 $color-third: #02f4bf;
 
-// ─── CSS Custom Properties ────────────────────────────────────────────────────
+// -Page background gradient-
+$gradient-page-bg: linear-gradient(
+  to bottom,
+  $color-main 0%,
+  $color-main-light 40%,
+  $color-main 100%
+);
+
+// -CSS Custom Properties-
 :root {
   --color-main: #{$color-main};
   --color-second: #{$color-second};
   --color-third: #{$color-third};
 }
 
-// ─── Typography ───────────────────────────────────────────────────────────────
+// -Typography-
 $font-family-base: 'Roboto Mono', monospace;
 
-$font-size-sm: 0.875rem; // 14px
-$font-size-md: 1rem; // 16px
-$font-size-lg: 1.25rem; // 20px
-$font-size-xl: 1.5rem; // 24px
-$font-size-2xl: 2rem; // 32px
-$font-size-3xl: 3rem; // 48px
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 3rem;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -27,29 +38,31 @@ $font-weight-bold: 700;
 $line-height-tight: 1.2;
 $line-height-base: 1.6;
 
-// ─── Spacing ──────────────────────────────────────────────────────────────────
-$spacing-1: 0.25rem; // 4px
-$spacing-2: 0.5rem; // 8px
-$spacing-3: 0.75rem; // 12px
-$spacing-4: 1rem; // 16px
-$spacing-6: 1.5rem; // 24px
-$spacing-8: 2rem; // 32px
-$spacing-12: 3rem; // 48px
-$spacing-16: 4rem; // 64px
+// -Spacing-
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
+$spacing-4: 1rem;
+$spacing-6: 1.5rem;
+$spacing-8: 2rem;
+$spacing-12: 3rem;
+$spacing-16: 4rem;
 
-// ─── Breakpoints ──────────────────────────────────────────────────────────────
+// -Breakpoints-
 $bp-sm: 640px;
 $bp-md: 768px;
 $bp-lg: 1024px;
 $bp-xl: 1280px;
 
-// ─── Border radius ────────────────────────────────────────────────────────────
+// -Border radius-
+$header-height: 4.5rem;
+
 $radius-sm: 4px;
 $radius-md: 8px;
 $radius-lg: 16px;
 $radius-full: 9999px;
 
-// ─── Transitions ──────────────────────────────────────────────────────────────
+// -Transitions-
 $transition-fast: 150ms ease;
 $transition-base: 250ms ease;
 $transition-slow: 400ms ease;

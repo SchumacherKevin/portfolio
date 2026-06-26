@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero';
-import { Personalsection } from '../../components/personalsection/personalsection';
-import { Skillsection } from '../../components/skillsection/skillsection';
-import { Testimonialsection } from '../../components/testimonialsection/testimonialsection';
-import { Projectsection } from '../../components/projectsection/projectsection';
-import { Contactsection } from '../../components/contactsection/contactsection';
+import { PersonalSectionComponent } from '../../components/personalsection/personalsection';
+import { SkillSectionComponent } from '../../components/skillsection/skillsection';
+import { TestimonialSectionComponent } from '../../components/testimonialsection/testimonialsection';
+import { ProjectSectionComponent } from '../../components/projectsection/projectsection';
+import { ContactSectionComponent } from '../../components/contactsection/contactsection';
 
 @Component({
   selector: 'app-home',
@@ -13,11 +13,11 @@ import { Contactsection } from '../../components/contactsection/contactsection';
   standalone: true,
   imports: [
     HeroComponent,
-    Personalsection,
-    Skillsection,
-    Testimonialsection,
-    Projectsection,
-    Contactsection
+    PersonalSectionComponent,
+    SkillSectionComponent,
+    TestimonialSectionComponent,
+    ProjectSectionComponent,
+    ContactSectionComponent
   ]
 })
 export class HomeComponent { }

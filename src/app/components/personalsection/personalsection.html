@@ -1,6 +1,6 @@
 <section class="personal" id="about">
   <div class="personal__image-wrapper">
-    <img class="personal__image" src="assets/about me 01.JPG" alt="Kevin Schumacher" />
+    <img class="personal__image" src="assets/about-me.jpg" alt="Kevin Schumacher" />
   </div>
 
   <div class="personal__content">
@@ -9,14 +9,14 @@
     <p class="personal__description">{{ 'PERSONAL.DESCRIPTION' | translate }}</p>
 
     <div class="personal__iam-container">
-      <!-- Div 1: I am + location -->
+      <!-- -Div 1: I am + location- -->
       <div class="personal__iam-location">
         <span class="personal__iam-label">{{ 'PERSONAL.I_AM' | translate }}</span>
         <div class="personal__node personal__node--location">
           <div class="personal__node-icon-wrap">
-            <img src="assets/vector.svg" class="personal__node-icon" alt="" />
+            <img src="assets/location-icon.svg" class="personal__node-icon" alt="" />
             <img
-              src="assets/ellipse.svg"
+              src="assets/node-hover-shadow.svg"
               class="personal__node-ellipse"
               alt=""
               aria-hidden="true"
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <!-- Div 2: arrow-01 + relocate -->
+      <!-- -Div 2: arrow-01 + relocate- -->
       <div class="personal__relocate-group">
         <img
           src="assets/arrow-curved-red-01.svg"
@@ -41,7 +41,11 @@
         >
           <div class="personal__node-icon-wrap">
             <img
-              [src]="relocateHover ? 'assets/relocate-icon 02.svg' : 'assets/relocate-icon 01.svg'"
+              [src]="
+                relocateHover
+                  ? 'assets/relocate-icon-hover.svg'
+                  : 'assets/relocate-icon-default.svg'
+              "
               class="personal__node-icon"
               alt="Open to relocate"
             />
@@ -50,7 +54,7 @@
         </div>
       </div>
 
-      <!-- Div 3: remote + arrow-02 + arrow-03 -->
+      <!-- -Div 3: remote + arrow-02 + arrow-03- -->
       <div class="personal__remote-group">
         <div class="personal__remote-node-wrap">
           <div
@@ -60,7 +64,9 @@
           >
             <div class="personal__node-icon-wrap">
               <img
-                [src]="remoteHover ? 'assets/remote-icon 02.svg' : 'assets/remote-icon 01.svg'"
+                [src]="
+                  remoteHover ? 'assets/remote-icon-hover.svg' : 'assets/remote-icon-default.svg'
+                "
                 class="personal__node-icon"
                 alt="Open to work remote"
               />
@@ -68,7 +74,7 @@
             <span class="personal__node-text" [innerHTML]="'PERSONAL.REMOTE' | translate"></span>
           </div>
           <img
-            src="assets/arrowwhyme.svg"
+            src="assets/arrow-curved-red-small.svg"
             class="personal__arrow personal__arrow--2"
             alt=""
             aria-hidden="true"
@@ -83,6 +89,8 @@
       </div>
     </div>
 
-    <a href="#contact" class="personal__cta">{{ 'PERSONAL.CTA' | translate }}</a>
+    <a href="#contact" appScrollTo="contact" class="personal__cta">{{
+      'PERSONAL.CTA' | translate
+    }}</a>
   </div>
 </section>

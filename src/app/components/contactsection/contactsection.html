@@ -2,7 +2,7 @@
   <h2 class="contact__title">
     {{ 'CONTACT.TITLE' | translate }}
     <img
-      src="assets/arrow-curved-red big-02.svg"
+      src="assets/arrow-curved-red-big-02.svg"
       class="contact__title-arrow"
       alt="red arrow"
       aria-hidden="true"
@@ -20,7 +20,7 @@
           (mouseleave)="emailHover = false"
         >
           <img
-            [src]="emailHover ? 'assets/icon _email_ 02.svg' : 'assets/icon _email_.svg'"
+            [src]="emailHover ? 'assets/icon-email-hover.svg' : 'assets/icon-email.svg'"
             class="contact__info-icon"
             alt=""
             aria-hidden="true"
@@ -36,7 +36,7 @@
           (mouseleave)="phoneHover = false"
         >
           <img
-            [src]="phoneHover ? 'assets/icon _phone_ 02.svg' : 'assets/icon _phone_.svg'"
+            [src]="phoneHover ? 'assets/icon-phone-hover.svg' : 'assets/icon-phone.svg'"
             class="contact__info-icon"
             alt=""
             aria-hidden="true"
@@ -47,17 +47,12 @@
       </p>
     </div>
 
-    <a class="contact__scroll-up" href="#hero" aria-label="Back to top">
+    <a class="contact__scroll-up" href="#hero" appScrollTo="hero" aria-label="Back to top">
       <img src="assets/arrow-up-small.svg" alt="red arrow pointing up" aria-hidden="true" />
     </a>
   </div>
 
-  <form
-    class="contact__form"
-    [formGroup]="sendMailForm"
-    (ngSubmit)="submitsendMailForm()"
-    novalidate
-  >
+  <form class="contact__form" [formGroup]="sendMailForm" (ngSubmit)="submitForm()" novalidate>
     <div class="contact__fields">
       <div class="contact__inputs">
         <div class="contact__field">
@@ -71,16 +66,18 @@
               [class.contact__input--invalid]="isInvalid('senderName')"
               [class.contact__input--valid]="isValid('senderName')"
             />
-            @if (isInvalid('senderName')) {
-              <span class="contact__input-icon contact__input-icon--invalid">!</span>
-            }
             @if (isValid('senderName')) {
               <span class="contact__input-icon contact__input-icon--valid">✓</span>
             }
+            @if (isInvalid('senderName')) {
+              <p class="contact__field-error">
+                <span class="contact__error-text">{{
+                  'CONTACT.FORM.NAME_REQUIRED' | translate
+                }}</span>
+                <span class="contact__error-icon">!</span>
+              </p>
+            }
           </div>
-          @if (isInvalid('senderName')) {
-            <p class="contact__error">{{ 'CONTACT.FORM.NAME_REQUIRED' | translate }}</p>
-          }
         </div>
 
         <div class="contact__field">
@@ -94,16 +91,16 @@
               [class.contact__input--invalid]="isInvalid('email')"
               [class.contact__input--valid]="isValid('email')"
             />
-            @if (isInvalid('email')) {
-              <span class="contact__input-icon contact__input-icon--invalid">!</span>
-            }
             @if (isValid('email')) {
               <span class="contact__input-icon contact__input-icon--valid">✓</span>
             }
+            @if (isInvalid('email')) {
+              <p class="contact__field-error">
+                <span class="contact__error-text">{{ emailErrorMessage() }}</span>
+                <span class="contact__error-icon">!</span>
+              </p>
+            }
           </div>
-          @if (isInvalid('email')) {
-            <p class="contact__error">{{ emailErrorMessage() }}</p>
-          }
         </div>
       </div>
 
@@ -117,16 +114,18 @@
             [class.contact__input--invalid]="isInvalid('message')"
             [class.contact__input--valid]="isValid('message')"
           ></textarea>
-          @if (isInvalid('message')) {
-            <span class="contact__input-icon contact__input-icon--invalid">!</span>
-          }
           @if (isValid('message')) {
             <span class="contact__input-icon contact__input-icon--valid">✓</span>
           }
+          @if (isInvalid('message')) {
+            <p class="contact__field-error">
+              <span class="contact__error-text">{{
+                'CONTACT.FORM.MESSAGE_REQUIRED' | translate
+              }}</span>
+              <span class="contact__error-icon">!</span>
+            </p>
+          }
         </div>
-        @if (isInvalid('message')) {
-          <p class="contact__error">{{ 'CONTACT.FORM.MESSAGE_REQUIRED' | translate }}</p>
-        }
       </div>
     </div>
 
@@ -146,9 +145,9 @@
           }}</a>
           {{ 'CONTACT.FORM.PRIVACY_SUFFIX' | translate }}
         </label>
-        @if (isInvalid('privacy')) {
-          <p class="contact__error">{{ 'CONTACT.FORM.PRIVACY_REQUIRED' | translate }}</p>
-        }
+        <p class="contact__error" [class.contact__error--hidden]="!isInvalid('privacy')">
+          {{ 'CONTACT.FORM.PRIVACY_REQUIRED' | translate }}
+        </p>
       </div>
 
       <button type="submit" class="contact__submit" [disabled]="sending || sendMailForm.invalid">

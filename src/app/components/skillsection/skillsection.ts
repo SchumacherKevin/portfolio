@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ScrollToDirective } from '../../shared/scroll-to.directive';
 
 interface Skill {
   label: string;
@@ -10,11 +11,11 @@ interface Skill {
 @Component({
   selector: 'app-skillsection',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, ScrollToDirective],
   templateUrl: './skillsection.html',
   styleUrl: './skillsection.scss',
 })
-export class Skillsection {
+export class SkillSectionComponent {
   skills: Skill[] = [
     { label: 'Angular', icon: 'assets/angular-icon-v2.svg' },
     { label: 'TypeScript', icon: 'assets/typescript-icon.svg' },

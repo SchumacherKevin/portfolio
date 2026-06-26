@@ -1,14 +1,16 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .footer {
-  background-color: $color-main;
   border-top: 1px solid rgba($color-third, 0.12);
 }
 
 .footer__inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: $spacing-8;
+  padding-top: $spacing-8;
+  padding-bottom: $spacing-8;
+  @include page-padding-x;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +42,7 @@
 }
 
 .footer__copy {
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   color: $color-second;
   margin: 0;
   letter-spacing: 0.06em;
@@ -52,7 +54,7 @@
 }
 
 .footer__legal-link {
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   color: $color-second;
   text-decoration: none;
   letter-spacing: 0.05em;
@@ -99,7 +101,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: $spacing-6 $spacing-4;
+    padding-top: $spacing-6;
+    padding-bottom: $spacing-6;
   }
 }
 

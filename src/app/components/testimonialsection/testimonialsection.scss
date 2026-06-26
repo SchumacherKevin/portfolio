@@ -1,33 +1,35 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
-// ── Section Layout ─────────────────────────────────────────────────────────────
+// -Section Layout-
 .testimonials {
   display: flex;
   flex-direction: column;
   gap: $spacing-8;
   max-width: 1440px;
   margin: 0 auto;
-  padding: $spacing-16 $spacing-12;
-  background-color: $color-main;
+  padding-top: $spacing-16;
+  padding-bottom: $spacing-16;
+  @include page-padding-x;
 }
 
-// ── Heading ────────────────────────────────────────────────────────────────────
+// -Heading-
 .testimonials__title {
   font-family: $font-family-base;
-  font-size: $font-size-xl;
+  font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
   color: $color-second;
   line-height: $line-height-base;
 }
 
-// ── Body row: arrow + cards ────────────────────────────────────────────────────
+// -Body row: arrow + cards-
 .testimonials__body {
   display: flex;
   align-items: center;
   gap: $spacing-8;
 }
 
-// ── Arrow ──────────────────────────────────────────────────────────────────────
+// -Arrow-
 .testimonials__arrow {
   flex-shrink: 0;
   width: 90px;
@@ -36,7 +38,7 @@
   margin-top: $spacing-4;
 }
 
-// ── Cards grid ─────────────────────────────────────────────────────────────────
+// -Cards grid-
 .testimonials__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -45,7 +47,7 @@
   align-items: start;
 }
 
-// ── Individual card ────────────────────────────────────────────────────────────
+// -Individual card-
 .testimonials__card {
   display: flex;
   flex-direction: column;
@@ -75,10 +77,11 @@
   line-height: $line-height-base;
 }
 
-// ── Responsive ─────────────────────────────────────────────────────────────────
+// -Responsive-
 @media (max-width: $bp-lg) {
   .testimonials {
-    padding: $spacing-12 $spacing-8;
+    padding-top: $spacing-12;
+    padding-bottom: $spacing-12;
   }
 
   .testimonials__title {
@@ -88,7 +91,8 @@
 
 @media (max-width: $bp-md) {
   .testimonials {
-    padding: $spacing-8;
+    padding-top: $spacing-8;
+    padding-bottom: $spacing-8;
   }
 
   .testimonials__arrow {
@@ -108,7 +112,8 @@
 
 @media (max-width: $bp-sm) {
   .testimonials {
-    padding: $spacing-8 $spacing-4;
+    padding-top: $spacing-8;
+    padding-bottom: $spacing-8;
   }
 
   .testimonials__title {

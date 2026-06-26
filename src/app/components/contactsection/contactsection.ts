@@ -2,15 +2,16 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { ScrollToDirective } from '../../shared/scroll-to.directive';
 
 @Component({
   selector: 'app-contactsection',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, TranslatePipe],
+  imports: [RouterLink, ReactiveFormsModule, TranslatePipe, ScrollToDirective],
   templateUrl: './contactsection.html',
   styleUrl: './contactsection.scss',
 })
-export class Contactsection {
+export class ContactSectionComponent {
   private readonly formBuilder = inject(FormBuilder);
   private readonly translate = inject(TranslateService);
 
@@ -45,7 +46,7 @@ export class Contactsection {
     return '';
   }
 
-  async submitsendMailForm() {
+  async submitForm() {
     this.submitted = true;
 
     if (this.sendMailForm.invalid) {

@@ -3,7 +3,7 @@ import {
   provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection,
   inject
-} from '@angular/core'; import { provideRouter } from '@angular/router';
+} from '@angular/core'; import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideHttpClient } from "@angular/common/http";
 import { provideTranslateService, TranslateService } from "@ngx-translate/core";
 import { provideTranslateHttpLoader } from "@ngx-translate/http-loader";
@@ -13,7 +13,10 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes, withInMemoryScrolling({
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled'
+    })),
     provideZonelessChangeDetection(),
     provideHttpClient(),
     provideTranslateService({

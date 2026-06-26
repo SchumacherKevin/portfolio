@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .header {
   position: fixed;
@@ -15,18 +16,21 @@
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  padding: $spacing-4 $spacing-8;
+  padding-top: $spacing-4;
+  padding-bottom: $spacing-4;
+  @include page-padding-x;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: $spacing-8;
 }
 
-// ── Mobile menu wrapper (acts as a no-op on desktop) ─────────────────────────
+// -Mobile menu wrapper (acts as a no-op on desktop)-
 .header__menu {
   display: contents;
 }
 
-// ── Hamburger toggle (hidden on desktop) ──────────────────────────────────────
+// -Hamburger toggle (hidden on desktop)-
 .header__burger {
   display: none;
 }
@@ -56,7 +60,7 @@
 }
 
 .header__nav-link {
-  font-size: $font-size-xl;
+  font-size: 22px;
   font-weight: $font-weight-medium;
   color: $color-second;
   text-decoration: none;
@@ -89,13 +93,14 @@
   display: flex;
   align-items: center;
   gap: $spacing-2;
+  margin-left: auto;
 }
 
 .header__lang-btn {
   background: none;
   border: none;
   padding: 0;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-medium;
   color: rgba($color-second, 0.5);
   letter-spacing: 0.08em;
@@ -116,9 +121,16 @@
   color: rgba($color-second, 0.4);
 }
 
-@media (max-width: $bp-sm) {
+@media (max-width: $bp-md) {
   .header__inner {
-    padding: $spacing-3 $spacing-4;
+    padding-top: $spacing-3;
+    padding-bottom: $spacing-3;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .header__lang {
+    margin-left: 0;
   }
 
   .header__burger {

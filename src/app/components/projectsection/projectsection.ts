@@ -20,7 +20,7 @@ interface Project {
   standalone: true,
   imports: [TranslatePipe]
 })
-export class Projectsection {
+export class ProjectSectionComponent {
   readonly projects: Project[] = [
     {
       title: 'Join',

@@ -22,7 +22,9 @@
   },
   "SKILLS": {
     "TITLE": "Meine Skills",
-    "CHALLENGE_ME": "Fordere mich heraus"
+    "CHALLENGE_ME": "Fordere mich heraus",
+    "NOTE": "Ich lerne immer gerne neue Technologien, sag mir einfach, was du brauchst.",
+    "CTA": "Lass uns reden"
   },
   "PROJECTS": {
     "TITLE": "Meine Projekte",
@@ -89,9 +91,8 @@
     "TITLE": "Impressum",
     "IMPRINT": {
       "HEADING": "Angaben gemäß § 5 TMG",
-      "NAME": "Kevin Michael Schumacher",
-      "ADDRESS": "[Adresse des JOIN-Betreibers - z. B. eines der Studenten]"
-    },
+      "NAME": "Kevin Michael Schumacher"
+        },
     "CONTACT": {
       "HEADING": "Kontakt",
       "EMAIL": "E-Mail: KevinSchumacher@t-online.de"

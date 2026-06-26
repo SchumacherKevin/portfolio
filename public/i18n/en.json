@@ -22,7 +22,9 @@
   },
   "SKILLS": {
     "TITLE": "My Skills",
-    "CHALLENGE_ME": "Challenge me"
+    "CHALLENGE_ME": "Challenge me",
+    "NOTE": "I am always happy to learn new technologies, just tell me what you need.",
+    "CTA": "Let's talk"
   },
   "PROJECTS": {
     "TITLE": "My Projects",
@@ -89,8 +91,7 @@
     "TITLE": "Legal Notice",
     "IMPRINT": {
       "HEADING": "Imprint",
-      "NAME": "Kevin Michael Schumacher",
-      "ADDRESS": "[Address of the JOIN operator - e.g. one of the students]"
+      "NAME": "Kevin Michael Schumacher"
     },
     "CONTACT": {
       "HEADING": "Exploring the Board",

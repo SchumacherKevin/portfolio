@@ -1,17 +1,18 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
-// ── Section Layout ─────────────────────────────────────────────────────────────
+// -Section Layout-
 .contact {
   display: flex;
   flex-direction: column;
   gap: $spacing-8;
   max-width: 1440px;
   margin: 0 auto;
-  padding: $spacing-16 $spacing-12;
-  background-color: $color-main;
+  padding-bottom: $spacing-16;
+  @include page-padding-x;
 }
 
-// ── Heading ────────────────────────────────────────────────────────────────────
+// -Heading-
 .contact__title {
   display: inline-flex;
   align-items: center;
@@ -28,7 +29,7 @@
   margin-top: $spacing-4;
 }
 
-// ── Top row: description + info ─────────────────────────────────────────────────
+// -Top row: description + info-
 .contact__top {
   position: relative;
   display: grid;
@@ -38,7 +39,7 @@
 
 .contact__description {
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   font-weight: $font-weight-regular;
   color: $color-third;
   line-height: $line-height-base;
@@ -93,7 +94,7 @@
   }
 }
 
-// ── Form ──────────────────────────────────────────────────────────────────────
+// -Form-
 .contact__form {
   display: flex;
   flex-direction: column;
@@ -135,7 +136,7 @@
 .contact__textarea {
   width: 100%;
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   color: $color-third;
   background: transparent;
   border: 1px solid $color-third;
@@ -149,17 +150,15 @@
 
   &:focus {
     outline: none;
-    border-color: $color-second;
+    border-color: $color-third;
   }
 }
 
-.contact__input--invalid,
-.contact__input--invalid:focus {
+.contact__input--invalid {
   border-color: $color-second;
 }
 
-.contact__input--valid,
-.contact__input--valid:focus {
+.contact__input--valid {
   border-color: $color-third;
 }
 
@@ -179,7 +178,7 @@
   top: $spacing-3;
   right: $spacing-4;
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   font-weight: $font-weight-bold;
   line-height: 1;
 }
@@ -193,12 +192,65 @@
 }
 
 .contact__error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-3;
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   color: $color-second;
+  border: 1px solid $color-second;
+  border-radius: $radius-sm;
+  padding: $spacing-3 $spacing-4;
 }
 
-// ── Footer row: checkbox + submit ─────────────────────────────────────────────
+.contact__error--hidden {
+  visibility: hidden;
+}
+
+.contact__field-error {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-3;
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  color: $color-second;
+  background: $color-main;
+  border: 1px solid $color-second;
+  border-radius: $radius-sm;
+  padding: $spacing-3 $spacing-4;
+  pointer-events: none;
+}
+
+.contact__input-wrap:focus-within .contact__field-error {
+  display: none;
+}
+
+.contact__error-text {
+  overflow-wrap: anywhere;
+}
+
+.contact__error-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: $radius-full;
+  background: $color-second;
+  color: $color-main;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  line-height: 1;
+}
+
+// -Footer row: checkbox + submit-
 .contact__footer-row {
   display: flex;
   align-items: flex-start;
@@ -221,9 +273,8 @@
   align-items: center;
   gap: $spacing-2;
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   color: $color-third;
-  white-space: nowrap;
 
   input[type='checkbox'] {
     width: 14px;
@@ -280,7 +331,7 @@
 
 .contact__status {
   font-family: $font-family-base;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
   font-weight: $font-weight-medium;
 }
 
@@ -292,10 +343,11 @@
   color: $color-second;
 }
 
-// ── Responsive ─────────────────────────────────────────────────────────────────
+// -Responsive-
 @media (max-width: $bp-lg) {
   .contact {
-    padding: $spacing-12 $spacing-8;
+    padding-top: $spacing-12;
+    padding-bottom: $spacing-12;
   }
 
   .contact__title {
@@ -305,7 +357,8 @@
 
 @media (max-width: $bp-md) {
   .contact {
-    padding: $spacing-8;
+    padding-top: $spacing-8;
+    padding-bottom: $spacing-8;
   }
 
   .contact__top {
@@ -332,10 +385,6 @@
     gap: $spacing-4;
   }
 
-  .contact__checkbox {
-    white-space: normal;
-  }
-
   .contact__submit {
     align-self: flex-end;
   }
@@ -343,7 +392,8 @@
 
 @media (max-width: $bp-sm) {
   .contact {
-    padding: $spacing-8 $spacing-4;
+    padding-top: $spacing-16;
+    padding-bottom: $spacing-8;
   }
 
   .contact__title {
@@ -355,8 +405,6 @@
     display: none;
   }
 
-  // Lift .contact__top's children up to be direct children of .contact so
-  // they can be reordered (description → form → arrow → info) alongside it.
   .contact__top {
     display: contents;
   }

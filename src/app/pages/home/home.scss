@@ -8,3 +8,15 @@
 .home > * + * {
   margin-top: $spacing-16;
 }
+
+@media (max-width: $bp-lg) {
+  .home > * + * {
+    margin-top: $spacing-12;
+  }
+}
+
+@media (max-width: $bp-md) {
+  .home > * + * {
+    margin-top: $spacing-8;
+  }
+}

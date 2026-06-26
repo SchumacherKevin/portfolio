@@ -1,15 +1,17 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
-// ── Section Layout ─────────────────────────────────────────────────────────────
+// -Section Layout-
 .personal {
   display: grid;
   grid-template-columns: 42% 1fr;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: $color-main;
+  scroll-margin-top: $header-height;
+  @include page-padding-x;
 }
 
-// ── Photo ──────────────────────────────────────────────────────────────────────
+// -Photo-
 .personal__image-wrapper {
   overflow: hidden;
 }
@@ -22,17 +24,17 @@
   display: block;
 }
 
-// ── Right Content ──────────────────────────────────────────────────────────────
+// -Right Content-
 .personal__content {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  padding: $spacing-16 $spacing-12 $spacing-16 $spacing-8;
+  padding: $spacing-16 0 $spacing-16 $spacing-8;
   gap: $spacing-8;
 }
 
-// ── Title ──────────────────────────────────────────────────────────────────────
+// -Title-
 .personal__title {
   font-family: $font-family-base;
   font-size: $font-size-3xl;
@@ -40,7 +42,7 @@
   color: $color-second;
 }
 
-// ── Description ────────────────────────────────────────────────────────────────
+// -Description-
 .personal__description {
   font-family: $font-family-base;
   font-size: $font-size-md;
@@ -51,7 +53,7 @@
   max-width: 460px;
 }
 
-// ── "I am" container ───────────────────────────────────────────────────────────
+// -"I am" container-
 .personal__iam-container {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +62,7 @@
   width: 100%;
 }
 
-// ── Div 1: I am + location ─────────────────────────────────────────────────────
+// -Div 1: I am + location-
 .personal__iam-location {
   display: flex;
   align-items: center;
@@ -68,7 +70,7 @@
   width: 100%;
 }
 
-// ── Div 2: arrow-01 + relocate ─────────────────────────────────────────────────
+// -Div 2: arrow-01 + relocate-
 .personal__relocate-group {
   display: flex;
   align-items: center;
@@ -76,7 +78,7 @@
   width: 100%;
 }
 
-// ── Div 3: remote + arrow-02 + arrow-03 ───────────────────────────────────────
+// -Div 3: remote + arrow-02 + arrow-03-
 .personal__remote-group {
   display: flex;
   justify-content: flex-end;
@@ -91,7 +93,7 @@
   padding-right: 140px;
 }
 
-// ── "I am" label ───────────────────────────────────────────────────────────────
+// -"I am" label-
 .personal__iam-label {
   font-family: $font-family-base;
   font-size: $font-size-3xl;
@@ -102,7 +104,7 @@
   padding-right: 120px;
 }
 
-// ── Nodes ──────────────────────────────────────────────────────────────────────
+// -Nodes-
 .personal__node {
   display: flex;
   align-items: center;
@@ -110,7 +112,7 @@
   cursor: default;
 }
 
-// ── Icon wrapper ───────────────────────────────────────────────────────────────
+// -Icon wrapper-
 .personal__node-icon-wrap {
   position: relative;
   display: inline-flex;
@@ -130,7 +132,7 @@
   }
 }
 
-// ── Ellipse shadow ─────────────────────────────────────────────────────────────
+// -Ellipse shadow-
 .personal__node-ellipse {
   position: absolute;
   bottom: -10px;
@@ -147,7 +149,7 @@
   }
 }
 
-// ── Node text ──────────────────────────────────────────────────────────────────
+// -Node text-
 .personal__node-text {
   font-family: $font-family-base;
   font-size: $font-size-md;
@@ -157,44 +159,38 @@
   padding-right: 32px;
 }
 
-// ── Arrows ─────────────────────────────────────────────────────────────────────
+// -Arrows-
 .personal__arrow {
   height: auto;
   pointer-events: none;
   flex-shrink: 0;
 }
 
-// ── CTA Button ─────────────────────────────────────────────────────────────────
+// -CTA Button-
 .personal__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: $spacing-3 $spacing-8;
-  background-color: $color-third;
-  color: $color-main;
-  font-family: $font-family-base;
-  font-size: $font-size-md;
-  font-weight: $font-weight-bold;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  border: 2px solid $color-third;
-  transition:
-    background-color $transition-base,
-    color $transition-base;
-
-  &:hover {
-    color: $color-second;
-  }
+  @include cta-button;
 }
 
-// ── Responsive ─────────────────────────────────────────────────────────────────
+// -Responsive-
 @media (max-width: $bp-lg) {
   .personal {
     grid-template-columns: 38% 1fr;
   }
 
   .personal__content {
-    padding: $spacing-12 $spacing-8 $spacing-12 $spacing-6;
+    padding: $spacing-12 0 $spacing-12 $spacing-6;
+  }
+
+  .personal__remote-node-wrap {
+    padding-right: $spacing-8;
+  }
+
+  .personal__iam-label {
+    padding-right: $spacing-8;
+  }
+
+  .personal__node-text {
+    padding-right: $spacing-4;
   }
 }
 
@@ -207,8 +203,12 @@
     height: 320px;
   }
 
+  .personal__image {
+    object-position: center 20%;
+  }
+
   .personal__content {
-    padding: $spacing-8;
+    padding: $spacing-8 0;
     align-items: flex-start;
   }
 
@@ -225,6 +225,10 @@
   .personal__relocate-group {
     width: 100%;
   }
+
+  .personal__cta {
+    align-self: flex-end;
+  }
 }
 
 @media (max-width: $bp-sm) {
@@ -235,7 +239,7 @@
   .personal__content {
     align-items: center;
     text-align: center;
-    padding: $spacing-8 $spacing-4;
+    padding: $spacing-16 0;
     gap: $spacing-6;
   }
 
@@ -245,7 +249,7 @@
 
   .personal__description {
     text-align: center;
-    font-size: $font-size-sm;
+    font-size: $font-size-md;
     max-width: 300px;
     margin: 0 auto;
   }
@@ -254,7 +258,6 @@
     display: none;
   }
 
-  // Hide arrows by default, then re-show only the two used in the mobile layout.
   .personal__arrow {
     display: none;
     height: 50px;
@@ -274,8 +277,6 @@
     margin-right: $spacing-6;
   }
 
-  // Flatten the desktop row wrappers so "I am" + the three nodes + the two
-  // visible arrows become direct flex children that can be reordered/centered.
   .personal__iam-container {
     display: flex;
     flex-direction: column;
