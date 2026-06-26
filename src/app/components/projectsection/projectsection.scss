@@ -14,7 +14,7 @@
 // -Heading-
 .projects__title {
   font-family: $font-family-base;
-  font-size: $font-size-3xl;
+  font-size: $font-size-54;
   font-weight: $font-weight-bold;
   color: $color-second;
   text-align: center;
@@ -71,14 +71,14 @@
 
 .projects__name {
   font-family: $font-family-base;
-  font-size: $font-size-2xl;
+  font-size: $font-size-3xl;
   font-weight: $font-weight-bold;
   color: $color-third;
 }
 
 .projects__tech {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-regular;
   color: $color-third;
   letter-spacing: 0.02em;
@@ -86,7 +86,7 @@
 
 .projects__description {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-regular;
   color: $color-third;
   line-height: $line-height-base;
@@ -102,7 +102,7 @@
 
 .projects__btn {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-medium;
   padding: $spacing-3 $spacing-6;
   border-radius: $radius-sm;
@@ -193,7 +193,7 @@
   }
 
   .projects__title {
-    font-size: $font-size-xl;
+    font-size: $font-size-2xl;
     margin-bottom: $spacing-8;
   }
 

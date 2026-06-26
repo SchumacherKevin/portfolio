@@ -37,7 +37,7 @@
 // -Title-
 .personal__title {
   font-family: $font-family-base;
-  font-size: $font-size-3xl;
+  font-size: $font-size-54;
   font-weight: $font-weight-bold;
   color: $color-second;
 }
@@ -295,11 +295,12 @@
 
   .personal__iam-label {
     padding-right: 0;
-    font-size: $font-size-xl;
+    font-size: 18px;
   }
 
   .personal__node-text {
     padding-right: 0;
+    font-size: $font-size-md;
   }
 
   .personal__node-icon {

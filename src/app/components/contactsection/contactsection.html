@@ -67,14 +67,24 @@
               [class.contact__input--valid]="isValid('senderName')"
             />
             @if (isValid('senderName')) {
-              <span class="contact__input-icon contact__input-icon--valid">✓</span>
+              <img
+                src="assets/icon-done.svg"
+                class="contact__input-icon contact__input-icon--valid"
+                alt=""
+                aria-hidden="true"
+              />
             }
             @if (isInvalid('senderName')) {
               <p class="contact__field-error">
                 <span class="contact__error-text">{{
                   'CONTACT.FORM.NAME_REQUIRED' | translate
                 }}</span>
-                <span class="contact__error-icon">!</span>
+                <img
+                  src="assets/icon-req.svg"
+                  class="contact__error-icon"
+                  alt=""
+                  aria-hidden="true"
+                />
               </p>
             }
           </div>
@@ -92,12 +102,22 @@
               [class.contact__input--valid]="isValid('email')"
             />
             @if (isValid('email')) {
-              <span class="contact__input-icon contact__input-icon--valid">✓</span>
+              <img
+                src="assets/icon-done.svg"
+                class="contact__input-icon contact__input-icon--valid"
+                alt=""
+                aria-hidden="true"
+              />
             }
             @if (isInvalid('email')) {
               <p class="contact__field-error">
                 <span class="contact__error-text">{{ emailErrorMessage() }}</span>
-                <span class="contact__error-icon">!</span>
+                <img
+                  src="assets/icon-req.svg"
+                  class="contact__error-icon"
+                  alt=""
+                  aria-hidden="true"
+                />
               </p>
             }
           </div>
@@ -115,14 +135,24 @@
             [class.contact__input--valid]="isValid('message')"
           ></textarea>
           @if (isValid('message')) {
-            <span class="contact__input-icon contact__input-icon--valid">✓</span>
+            <img
+              src="assets/icon-done.svg"
+              class="contact__input-icon contact__input-icon--valid"
+              alt=""
+              aria-hidden="true"
+            />
           }
           @if (isInvalid('message')) {
             <p class="contact__field-error">
               <span class="contact__error-text">{{
                 'CONTACT.FORM.MESSAGE_REQUIRED' | translate
               }}</span>
-              <span class="contact__error-icon">!</span>
+              <img
+                src="assets/icon-req.svg"
+                class="contact__error-icon"
+                alt=""
+                aria-hidden="true"
+              />
             </p>
           }
         </div>

@@ -22,9 +22,11 @@
               ></span>
             }
           </div>
-          <span class="skills__label">{{
-            skill.challenge ? (skill.label | translate) : skill.label
-          }}</span>
+          @if (skill.challenge) {
+            <span class="skills__label" [innerHTML]="skill.label | translate"></span>
+          } @else {
+            <span class="skills__label">{{ skill.label }}</span>
+          }
         </div>
       }
     </div>

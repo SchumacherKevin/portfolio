@@ -14,9 +14,24 @@
 }
 
 // -Heading-
+.testimonials__header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: $spacing-3;
+}
+
 .testimonials__title {
   font-family: $font-family-base;
-  font-size: $font-size-3xl;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-second;
+  line-height: $line-height-base;
+}
+
+.testimonials__subtitle {
+  font-family: $font-family-base;
+  font-size: $font-size-xl;
   font-weight: $font-weight-bold;
   color: $color-second;
   line-height: $line-height-base;
@@ -38,13 +53,24 @@
   margin-top: $spacing-4;
 }
 
-// -Cards grid-
+// -Cards grid (desktop/tablet)-
 .testimonials__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $spacing-8;
   flex: 1;
   align-items: start;
+}
+
+// -Looping swipe carousel (mobile only, see media query below)-
+.testimonials__carousel {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials__track {
+  display: flex;
 }
 
 // -Individual card-
@@ -63,7 +89,7 @@
 
 .testimonials__project {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-regular;
   color: $color-third;
   margin-bottom: $spacing-2;
@@ -71,7 +97,7 @@
 
 .testimonials__quote {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-regular;
   color: $color-third;
   line-height: $line-height-base;
@@ -85,6 +111,10 @@
   }
 
   .testimonials__title {
+    font-size: $font-size-lg;
+  }
+
+  .testimonials__subtitle {
     font-size: $font-size-lg;
   }
 }
@@ -101,12 +131,29 @@
 
   .testimonials__body {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
+  // -Swipeable, looping carousel (JS-driven drag, see component)-
   .testimonials__cards {
-    grid-template-columns: 1fr;
-    gap: $spacing-6;
+    display: none;
+  }
+
+  .testimonials__carousel {
+    display: block;
+  }
+
+  .testimonials__carousel .testimonials__card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    border: 2px solid $color-third;
+    border-radius: $radius-md;
+    padding: $spacing-6 $spacing-4;
+    text-align: center;
+  }
+
+  .testimonials__carousel .testimonials__project {
+    color: $color-second;
   }
 }
 
@@ -114,17 +161,22 @@
   .testimonials {
     padding-top: $spacing-8;
     padding-bottom: $spacing-8;
+    gap: 0;
+  }
+
+  .testimonials__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
   .testimonials__title {
     text-align: center;
+    font-size: $font-size-xl;
   }
 
-  .testimonials__body {
-    align-items: center;
-  }
-
-  .testimonials__card {
+  .testimonials__subtitle {
     text-align: center;
+    font-size: 16px;
   }
 }

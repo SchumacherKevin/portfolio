@@ -22,7 +22,7 @@
   },
   "SKILLS": {
     "TITLE": "My Skills",
-    "CHALLENGE_ME": "Challenge me",
+    "CHALLENGE_ME": "Challenge<br>me",
     "NOTE": "I am always happy to learn new technologies, just tell me what you need.",
     "CTA": "Let's talk"
   },
@@ -43,7 +43,8 @@
     }
   },
   "TESTIMONIALS": {
-    "TITLE": "Need a teamplayer? Here's what my colleagues say about me",
+    "TITLE": "Need a teamplayer?",
+    "SUBTITLE": "Here's what my colleagues say about me",
     "ITEMS": {
       "NOAH": {
         "PROJECT": "Project Sharkie",

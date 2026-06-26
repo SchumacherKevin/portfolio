@@ -13,6 +13,11 @@
   @include page-padding-x;
 }
 
+// -Grouping wrapper, transparent for grid layout below the widescreen breakpoint-
+.hero__content {
+  display: contents;
+}
+
 // -Contact Me sidebar-
 .hero__contact {
   grid-column: 1;
@@ -109,7 +114,7 @@
 
 .hero__subtitle {
   font-family: $font-family-base;
-  font-size: $font-size-3xl;
+  font-size: $font-size-54;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   color: $color-third;
@@ -118,12 +123,57 @@
 
 .hero__name {
   font-family: $font-family-base;
-  font-size: $font-size-3xl;
+  font-size: 60px;
   font-weight: $font-weight-bold;
   letter-spacing: 0.04em;
   color: $color-third;
   line-height: $line-height-tight;
   overflow-wrap: break-word;
+}
+
+// -Widescreen layout (background bleeds full width, content stays capped at 1440px)-
+@media (min-width: $bp-xxl) {
+  .hero {
+    display: flex;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $spacing-6;
+    height: 100%;
+    margin-top: -120px;
+  }
+
+  .hero__name {
+    font-size: 82px;
+  }
+
+  .hero__text {
+    order: 1;
+    padding: 0;
+  }
+
+  .hero__contact {
+    order: 2;
+    transform: none;
+    margin: 80px;
+  }
+
+  .hero__scroll-btn {
+    order: 3;
+    align-self: center;
+  }
+
+  .hero__image-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    height: 65%;
+    margin-left: -350px;
+  }
 }
 
 // -Responsive-
@@ -152,7 +202,7 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    height: auto;
+    height: 100dvh;
     gap: $spacing-6;
     padding-bottom: $spacing-8;
   }
@@ -191,13 +241,13 @@
   .hero__subtitle {
     display: inline-flex;
     padding: $spacing-1 $spacing-3;
-    font-size: $font-size-md;
+    font-size: $font-size-xl;
     margin-bottom: 0;
     white-space: nowrap;
   }
 
   .hero__name {
     width: 100%;
-    font-size: clamp(#{$font-size-xl}, 9vw, #{$font-size-3xl});
+    font-size: 40px;
   }
 }

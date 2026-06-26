@@ -15,7 +15,7 @@
 
 .skills__heading {
   font-family: $font-family-base;
-  font-size: $font-size-3xl;
+  font-size: $font-size-54;
   font-weight: $font-weight-bold;
   color: $color-second;
   margin-bottom: $spacing-12;
@@ -24,7 +24,7 @@
 .skills__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-8 $spacing-12;
+  gap: 10rem 10rem;
 }
 
 .skills__item {
@@ -69,7 +69,7 @@
 
 .skills__label {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: 18px;
   font-weight: $font-weight-medium;
   color: $color-third;
   text-align: center;
@@ -135,14 +135,12 @@
   }
 
   .skills__icon-wrap {
-    width: 52px;
-    height: 52px;
+    width: 72px;
+    height: 72px;
   }
 
   .skills__label {
-    overflow-wrap: break-word;
-    word-break: break-word;
-    font-size: $font-size-md;
+    display: none;
   }
 
   .skills__item--challenge {
@@ -158,6 +156,7 @@
     }
 
     .skills__label {
+      display: block;
       flex: 1 1 auto;
       min-width: 0;
       text-align: left;

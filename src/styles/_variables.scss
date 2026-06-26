@@ -22,12 +22,13 @@ $gradient-page-bg: linear-gradient(
 // -Typography-
 $font-family-base: 'Roboto Mono', monospace;
 
-$font-size-sm: 0.875rem;
-$font-size-md: 1rem;
-$font-size-lg: 1.25rem;
-$font-size-xl: 1.5rem;
-$font-size-2xl: 2rem;
-$font-size-3xl: 3rem;
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 2rem; // 32px
+$font-size-3xl: 3rem; // 48px
+$font-size-54: 3.375rem; // 54px
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -37,23 +38,26 @@ $line-height-tight: 1.2;
 $line-height-base: 1.6;
 
 // -Spacing-
-$spacing-1: 0.25rem;
-$spacing-2: 0.5rem;
-$spacing-3: 0.75rem;
-$spacing-4: 1rem;
-$spacing-6: 1.5rem;
-$spacing-8: 2rem;
-$spacing-12: 3rem;
-$spacing-16: 4rem;
+$spacing-1: 0.25rem; // 4px
+$spacing-2: 0.5rem; // 8px
+$spacing-3: 0.75rem; // 12px
+$spacing-4: 1rem; // 16px
+$spacing-6: 1.5rem; // 24px
+$spacing-8: 2rem; // 32px
+$spacing-12: 3rem; // 48px
+$spacing-16: 4rem; // 64px
+$spacing-32: 2rem; // 32px
+$spacing-54: 3.375rem; // 54px
 
 // -Breakpoints-
 $bp-sm: 640px;
 $bp-md: 768px;
 $bp-lg: 1024px;
 $bp-xl: 1280px;
+$bp-xxl: 1440px;
 
 // -Border radius-
-$header-height: 4.5rem;
+$header-height: 4.5rem; // 72px
 
 $radius-sm: 4px;
 $radius-md: 8px;

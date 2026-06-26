@@ -42,7 +42,7 @@
 }
 
 .footer__copy {
-  font-size: $font-size-md;
+  font-size: $font-size-xl;
   color: $color-second;
   margin: 0;
   letter-spacing: 0.06em;
@@ -113,10 +113,16 @@
 
   .footer__socials {
     order: 0;
+    gap: $spacing-8;
+    padding-block: $spacing-12;
   }
 
   .footer__logo {
     order: 1;
+  }
+
+  .footer__copy {
+    padding-bottom: $spacing-12;
   }
 
   .footer__center {

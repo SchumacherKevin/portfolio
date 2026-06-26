@@ -1,5 +1,8 @@
 <section class="testimonials" id="testimonials">
-  <h2 class="testimonials__title">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
+  <div class="testimonials__header">
+    <h2 class="testimonials__title">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
+    <p class="testimonials__subtitle">{{ 'TESTIMONIALS.SUBTITLE' | translate }}</p>
+  </div>
 
   <div class="testimonials__body">
     <img
@@ -17,6 +20,28 @@
           <p class="testimonials__quote">'' {{ item.quoteKey | translate }} ''</p>
         </div>
       }
+    </div>
+
+    <div
+      class="testimonials__carousel"
+      (touchstart)="onTouchStart($event)"
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onTouchEnd()"
+    >
+      <div
+        class="testimonials__track"
+        [style.transform]="trackTransform"
+        [style.transition]="trackTransition"
+        (transitionend)="onTrackTransitionEnd()"
+      >
+        @for (item of extendedTestimonials; track $index) {
+          <div class="testimonials__card">
+            <h3 class="testimonials__name">{{ item.name }}</h3>
+            <p class="testimonials__project">{{ item.projectKey | translate }}</p>
+            <p class="testimonials__quote">'' {{ item.quoteKey | translate }} ''</p>
+          </div>
+        }
+      </div>
     </div>
   </div>
 </section>
