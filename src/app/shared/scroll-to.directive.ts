@@ -5,8 +5,16 @@ import { Directive, HostListener, Input } from '@angular/core';
   standalone: true,
 })
 export class ScrollToDirective {
+  /**
+   * Id of the element to scroll into view on click.
+   * @default ''
+   */
   @Input('appScrollTo') targetId = '';
 
+  /**
+   * Scrolls smoothly to the element matching `targetId`.
+   * @param event Click event being intercepted to suppress the default jump.
+   */
   @HostListener('click', ['$event'])
   onClick(event: Event): void {
     event.preventDefault();

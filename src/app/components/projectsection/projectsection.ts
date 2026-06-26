@@ -10,6 +10,7 @@ interface Project {
   githubUrl: string;
   liveUrl: string;
   imageLeft: boolean;
+  /** Greys out the card and suppresses its GitHub/live links when the project isn't public yet. */
   disabled?: boolean;
 }
 

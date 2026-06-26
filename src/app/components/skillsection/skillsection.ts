@@ -5,6 +5,7 @@ import { ScrollToDirective } from '../../shared/scroll-to.directive';
 interface Skill {
   label: string;
   icon: string;
+  /** Renders this entry as the "challenge me" call-to-action tile instead of a skill. */
   challenge?: boolean;
 }
 

@@ -14,6 +14,10 @@ export class HeaderComponent {
   readonly currentLang = this.translate.currentLang;
   readonly menuOpen = signal(false);
 
+  /**
+   * Switches the active i18n language for the whole app.
+   * @param lang Language code matching one of the loaded translation files (e.g. `'en'`, `'de'`).
+   */
   useLang(lang: string): void {
     this.translate.use(lang);
   }

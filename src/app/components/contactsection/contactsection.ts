@@ -29,16 +29,30 @@ export class ContactSectionComponent {
     privacy: [false, Validators.requiredTrue],
   });
 
+  /**
+   * Whether the given control should show its invalid state, i.e. it failed validation and the
+   * user already interacted with it or attempted a submit.
+   * @param controlName Name of the form control to check.
+   */
   isInvalid(controlName: string): boolean {
     const control = this.sendMailForm.get(controlName);
     return !!control && control.invalid && (control.touched || this.submitted);
   }
 
+  /**
+   * Whether the given control should show its valid state, i.e. it passed validation and the
+   * user already interacted with it.
+   * @param controlName Name of the form control to check.
+   */
   isValid(controlName: string): boolean {
     const control = this.sendMailForm.get(controlName);
     return !!control && control.valid && (control.touched || control.dirty);
   }
 
+  /**
+   * Translated validation message for the email field, based on its current error.
+   * @returns Empty string if the email control has no active error.
+   */
   emailErrorMessage(): string {
     const control = this.sendMailForm.get('email');
     if (control?.hasError('required')) return this.translate.instant('CONTACT.FORM.EMAIL_REQUIRED');
@@ -46,6 +60,10 @@ export class ContactSectionComponent {
     return '';
   }
 
+  /**
+   * Validates and posts the contact form to the PHP mail endpoint, updating
+   * `submitStatus` with the outcome.
+   */
   async submitForm() {
     this.submitted = true;
 

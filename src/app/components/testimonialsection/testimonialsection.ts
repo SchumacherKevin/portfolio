@@ -61,6 +61,11 @@ export class TestimonialSectionComponent {
     this.touchCurrentX = touch.clientX;
   }
 
+  /**
+   * Tracks the swipe and suppresses page scroll once the gesture is clearly horizontal,
+   * so a vertical swipe still scrolls the page instead of dragging the carousel.
+   * @param event Active touch-move event for the ongoing gesture.
+   */
   onTouchMove(event: TouchEvent): void {
     const touch = event.touches[0];
     this.touchCurrentX = touch.clientX;
@@ -91,6 +96,10 @@ export class TestimonialSectionComponent {
     this.currentIndex--;
   }
 
+  /**
+   * Snaps the loop back from a clone slide to its real counterpart once the
+   * transition animation finishes, without animating the jump.
+   */
   onTrackTransitionEnd(): void {
     const lastIndex = this.extendedTestimonials.length - 1;
     if (this.currentIndex === lastIndex) {
