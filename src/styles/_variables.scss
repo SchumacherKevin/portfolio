@@ -1,17 +1,15 @@
 // -Colors-
-@use 'sass:color';
-
 $color-main: #13074e;
-$color-main-light: color.scale($color-main, $lightness: 22%);
 $color-second: #e15544;
 $color-third: #02f4bf;
 
 // -Page background gradient-
 $gradient-page-bg: linear-gradient(
-  to bottom,
-  $color-main 0%,
-  $color-main-light 40%,
-  $color-main 100%
+  180deg,
+  rgba(11, 4, 45, 1) 0%,
+  rgba(19, 7, 78, 1) 33%,
+  rgba(11, 4, 45, 1) 66%,
+  rgba(19, 7, 78, 1) 100%
 );
 
 // -CSS Custom Properties-
