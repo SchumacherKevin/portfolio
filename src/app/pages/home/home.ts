@@ -34,8 +34,22 @@ export class HomeComponent implements AfterViewInit {
     const fragment = this.route.snapshot.fragment;
     if (!fragment) return;
 
-    setTimeout(() => {
-      document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 150);
+    let attempts = 0;
+    const maxAttempts = 60;
+
+    const tryScroll = () => {
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      attempts += 1;
+      if (attempts < maxAttempts) {
+        window.requestAnimationFrame(tryScroll);
+      }
+    };
+
+    window.requestAnimationFrame(tryScroll);
   }
 }

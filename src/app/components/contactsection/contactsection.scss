@@ -10,6 +10,7 @@
   margin: 0 auto;
   padding-bottom: $spacing-16;
   @include page-padding-x;
+  scroll-margin-top: $header-height;
 }
 
 // -Heading-
