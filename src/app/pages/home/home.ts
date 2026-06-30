@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, inject } from '@angular/core';
+import { AfterViewInit, Component, inject, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { HeroComponent } from '../../components/hero/hero';
 import { PersonalSectionComponent } from '../../components/personalsection/personalsection';
 import { SkillSectionComponent } from '../../components/skillsection/skillsection';
@@ -21,35 +22,55 @@ import { ContactSectionComponent } from '../../components/contactsection/contact
     ContactSectionComponent
   ]
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnDestroy {
   private readonly route = inject(ActivatedRoute);
+  private fragmentSub?: Subscription;
 
-  /**
-   * Scrolls to the route fragment once the view has rendered. Needed because when navigating
-   * here from another lazy-loaded route (e.g. the burger menu on the legal notice page), the
-   * router's built-in anchor scrolling fires before the freshly loaded sections have settled
-   * into their final layout, landing on the wrong spot on mobile.
-   */
+  // Subscribing to the observable (not just the snapshot) handles both initial load
+  // (cross-page navigation) and same-page fragment changes (e.g. burger-menu links
+  // while already on home). Using window.scrollTo with the fixed-header offset ensures
+  // we land below the header instead of behind it.
   ngAfterViewInit(): void {
-    const fragment = this.route.snapshot.fragment;
-    if (!fragment) return;
+    this.fragmentSub = this.route.fragment.subscribe(fragment => {
+      if (!fragment) return;
+      this.scrollToFragment(fragment);
+    });
+  }
 
-    let attempts = 0;
-    const maxAttempts = 60;
+  ngOnDestroy(): void {
+    this.fragmentSub?.unsubscribe();
+  }
 
-    const tryScroll = () => {
+  private scrollToFragment(fragment: string): void {
+    const doScroll = () => {
       const element = document.getElementById(fragment);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        return;
-      }
-
-      attempts += 1;
-      if (attempts < maxAttempts) {
-        window.requestAnimationFrame(tryScroll);
-      }
+      if (!element) return;
+      const header = document.querySelector<HTMLElement>('.header');
+      const offset = header?.offsetHeight ?? 0;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
     };
 
-    window.requestAnimationFrame(tryScroll);
+    // With cache disabled, Angular's template images (hero, projects, about-me, etc.)
+    // are requested after the initial page load, so window.load and readyState checks
+    // fire too early. We wait specifically for every unloaded image currently in the
+    // DOM — once they all have their real dimensions the layout is stable and
+    // getBoundingClientRect gives the correct contact-section position.
+    const pending = Array.from(document.images).filter(img => !img.complete);
+
+    if (pending.length === 0) {
+      window.requestAnimationFrame(doScroll);
+      return;
+    }
+
+    Promise.all(
+      pending.map(
+        img =>
+          new Promise<void>(resolve => {
+            img.addEventListener('load', () => resolve(), { once: true });
+            img.addEventListener('error', () => resolve(), { once: true });
+          })
+      )
+    ).then(() => window.requestAnimationFrame(doScroll));
   }
 }
