@@ -36,6 +36,6 @@ export class HomeComponent implements AfterViewInit {
 
     setTimeout(() => {
       document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    }, 150);
   }
 }
