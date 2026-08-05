@@ -32,7 +32,7 @@ export class ProjectSectionComponent {
       githubUrl: 'https://github.com/SchumacherKevin/join.git',
       liveUrl: 'https://projects.kevin-schumacher.de/join/',
       imageLeft: true,
-      disabled: true
+      disabled: false,
     },
     {
       title: 'Pokedex',
@@ -42,7 +42,7 @@ export class ProjectSectionComponent {
       technologies: ['JavaScript', 'HTML', 'CSS'],
       githubUrl: 'https://github.com/SchumacherKevin/Pokedex.git',
       liveUrl: 'https://projects.kevin-schumacher.de/pokedex/',
-      imageLeft: false
+      imageLeft: false,
     },
     {
       title: 'El Pollo Loco',
