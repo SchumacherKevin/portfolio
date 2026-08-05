@@ -10,7 +10,6 @@ interface Project {
   githubUrl: string;
   liveUrl: string;
   imageLeft: boolean;
-  /** Greys out the card and suppresses its GitHub/live links when the project isn't public yet. */
   disabled?: boolean;
 }
 
@@ -43,6 +42,7 @@ export class ProjectSectionComponent {
       githubUrl: 'https://github.com/SchumacherKevin/Pokedex.git',
       liveUrl: 'https://projects.kevin-schumacher.de/pokedex/',
       imageLeft: false,
+      disabled: false,
     },
     {
       title: 'El Pollo Loco',
@@ -52,7 +52,8 @@ export class ProjectSectionComponent {
       technologies: ['JavaScript', 'HTML', 'CSS'],
       githubUrl: 'https://github.com/SchumacherKevin/El-Pollo-Locco.git',
       liveUrl: 'https://projects.kevin-schumacher.de/el-pollo-loco/',
-      imageLeft: true
+      imageLeft: true,
+      disabled: false,
     }
   ];
 }
