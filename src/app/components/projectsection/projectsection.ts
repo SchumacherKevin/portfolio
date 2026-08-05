@@ -28,8 +28,8 @@ export class ProjectSectionComponent {
       descriptionKey: 'PROJECTS.ITEMS.JOIN.DESCRIPTION',
       image: 'assets/join.png',
       imageAlt: 'Join project screenshot',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      githubUrl: 'https://github.com/SchumacherKevin',
+      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Superbase'],
+      githubUrl: 'https://github.com/SchumacherKevin/join.git',
       liveUrl: 'https://projects.kevin-schumacher.de/join/',
       imageLeft: true,
       disabled: true
