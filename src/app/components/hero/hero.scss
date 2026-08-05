@@ -177,6 +177,16 @@
 }
 
 // -Responsive-
+@media (max-width: 960px) {
+  .hero__subtitle {
+    font-size: 42px;
+  }
+
+  .hero__name {
+    font-size: 48px;
+  }
+}
+
 @media (max-width: $bp-md) {
   .hero {
     grid-template-columns: 3rem minmax(0, 1fr) 55%;
