@@ -17,19 +17,19 @@ interface Testimonial {
 export class TestimonialSectionComponent {
   readonly testimonials: Testimonial[] = [
     {
-      name: 'Noah Mueller',
-      projectKey: 'TESTIMONIALS.ITEMS.NOAH.PROJECT',
-      quoteKey: 'TESTIMONIALS.ITEMS.NOAH.QUOTE'
+      name: 'Zohreh Habibi',
+      projectKey: 'TESTIMONIALS.ITEMS.ZOHREH.PROJECT',
+      quoteKey: 'TESTIMONIALS.ITEMS.ZOHREH.QUOTE'
     },
     {
-      name: 'Evelyn Marx',
-      projectKey: 'TESTIMONIALS.ITEMS.EVELYN.PROJECT',
-      quoteKey: 'TESTIMONIALS.ITEMS.EVELYN.QUOTE'
+      name: 'Denis Nolting',
+      projectKey: 'TESTIMONIALS.ITEMS.DENIS.PROJECT',
+      quoteKey: 'TESTIMONIALS.ITEMS.DENIS.QUOTE'
     },
     {
-      name: 'James Rugman',
-      projectKey: 'TESTIMONIALS.ITEMS.JAMES.PROJECT',
-      quoteKey: 'TESTIMONIALS.ITEMS.JAMES.QUOTE'
+      name: 'Leon',
+      projectKey: 'TESTIMONIALS.ITEMS.LEON.PROJECT',
+      quoteKey: 'TESTIMONIALS.ITEMS.LEON.QUOTE'
     }
   ];
 

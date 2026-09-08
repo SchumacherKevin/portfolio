@@ -46,17 +46,17 @@
     "TITLE": "Need a teamplayer?",
     "SUBTITLE": "Here's what my colleagues say about me",
     "ITEMS": {
-      "NOAH": {
-        "PROJECT": "Project Sharkie",
-        "QUOTE": "Kevin had to develop, format and deliver content in collaboration with the team members. He is a reliable and friendly person."
+      "ZOHREH": {
+        "PROJECT": "Project Kochwelt",
+        "QUOTE": "His excellent organizational skills enabled him to coordinate the team effectively and distribute tasks fairly. He communicates clearly, responds to questions with patience, and is always reliable and punctual. He was great to work with."
       },
-      "EVELYN": {
-        "PROJECT": "Project Pollo Loco",
-        "QUOTE": "He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code."
+      "DENIS": {
+        "PROJECT": "Project Kochwelt",
+        "QUOTE": "I worked with Kevin Schumacher on a development project where he took on coordination and project management. Thanks to his structured planning, we hit every milestone on time. He made sure all components came together smoothly and created a productive team atmosphere through clear communication. I can recommend working with him without reservation."
       },
-      "JAMES": {
+      "LEON": {
         "PROJECT": "Project Join",
-        "QUOTE": "He is a reliable and friendly person. Work in a structured way and write clear code. I recommend him as a colleague."
+        "QUOTE": "You can always count on Kevin. He independently worked his way deep into the topics, did important groundwork in the background, and took a lot of pressure off the whole team. On top of that, he's easy to get along with and always in good spirits — that's exactly how teamwork should be."
       }
     }
   },

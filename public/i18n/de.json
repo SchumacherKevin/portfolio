@@ -46,17 +46,17 @@
     "TITLE": "Brauchst du einen Teamplayer?",
     "SUBTITLE": "Das sagen meine Kollegen über mich",
     "ITEMS": {
-      "NOAH": {
-        "PROJECT": "Projekt Sharkie",
-        "QUOTE": "Kevin musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und liefern. Er ist eine zuverlässige und freundliche Person."
+      "ZOHREH": {
+        "PROJECT": "Projekt Kochwelt",
+        "QUOTE": "Seine hervorragenden organisatorischen Fähigkeiten ermöglichten es ihm, das Team effektiv zu koordinieren und Aufgaben fair zu verteilen. Er kommuniziert klar, beantwortet Fragen geduldig und ist stets zuverlässig und pünktlich. Die Zusammenarbeit mit ihm hat großen Spaß gemacht."
       },
-      "EVELYN": {
-        "PROJECT": "Projekt Pollo Loco",
-        "QUOTE": "Er ist ein vertrauenswürdiger Teamplayer und kommt gut mit dem Stress von Deadlines zurecht. Strukturierte Arbeit und klarer Code."
+      "DENIS": {
+        "PROJECT": "Projekt Kochwelt",
+        "QUOTE": "Ich habe mit Kevin Schumacher in einem Entwicklungsprojekt zusammengearbeitet, in dem er die Koordination und das Projektmanagement übernommen hat. Durch seine strukturierte Planung erreichten wir alle Meilensteine termingerecht. Er stellte sicher, dass alle Komponenten reibungslos zusammengeführt wurden und schuf mit klarer Kommunikation eine produktive Teamatmosphäre. Ich kann die Zusammenarbeit mit ihm uneingeschränkt empfehlen."
       },
-      "JAMES": {
+      "LEON": {
         "PROJECT": "Projekt Join",
-        "QUOTE": "Er ist eine zuverlässige und freundliche Person. Arbeitet strukturiert und schreibt klaren Code. Ich empfehle ihn als Kollegen."
+        "QUOTE": "Auf Kevin ist einfach Verlass. Hat sich eigenständig tief in die Themen eingearbeitet, wichtige Vorarbeit im Background geleistet und damit das gesamte Team entlastet. Dazu super umgänglich und immer gut gelaunt bei der Sache – genau so soll Teamarbeit laufen."
       }
     }
   },
